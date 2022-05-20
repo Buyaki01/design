@@ -1,0 +1,2536 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keyword" content="payments,visa,mastercard">
+    <meta name="description" content="Virtual Pay">
+    <meta name="author" content="@virtualpay">
+
+    <title> </title>
+    <!-- Custom fonts for this template-->
+    <!-- <link href="v3.virtual-pay.io_files/all.css" rel="stylesheet" type="text/css">
+    <link href="v3.virtual-pay.io_files/css.css" rel="stylesheet"> -->
+      <!--Chart js-->
+    <script src="v3.virtual-pay.io_files/Chart_002.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="v3.virtual-pay.io_files/Chart.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous">
+    <!-- jQuery -->
+    <!-- Custom styles for this template-->
+    <link href="v3.virtual-pay.io_files/sb-admin-2.css" rel="stylesheet">
+    <link href="v3.virtual-pay.io_files/virtualpay.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="v3.virtual-pay.io_files/daterangepicker.css">
+    <link rel="icon" href="https://v3.virtual-pay.io/static/img/favicon.5139e9467cfe.png">
+    <script src="v3.virtual-pay.io_files/jquery.js"></script>
+    <script type="text/javascript" src="v3.virtual-pay.io_files/moment.js"></script>
+    <script type="text/javascript" src="v3.virtual-pay.io_files/daterangepicker.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    
+<style type="text/css">/* Chart.js */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper" class="">
+        
+        <!-- Navigation -->
+      
+      
+
+         
+  
+ 
+            
+<!-- Sidebar -->
+<ul class="
+    navbar-nav
+    bg-gradient-primary
+    sidebar sidebar-dark
+    accordion
+    {%
+    if
+    request.user_agent.is_mobile
+    %}toggled{%
+    endif%}
+  " id="accordionSidebar">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://v3.virtual-pay.io/">
+        <div class="sidebar-brand-text mx-3">
+            <img src="v3.virtual-pay.io_files/vp_logo.png" class="img-fluid" alt="Responsive image">
+        </div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+
+    <li class="nav-item active">
+        <a class="nav-link" href="https://v3.virtual-pay.io/">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
+     <li class="nav-item ">
+        <a class="nav-link" href="https://v3.virtual-pay.io/payments/">
+            <i class="fas fa-box-open    "></i>
+            <span>Collections</span></a>
+    </li>
+
+
+
+
+
+  <li class="nav-item ">
+      <a class="nav-link" href="https://v3.virtual-pay.io/disbursals/">
+          <i class="fas fa-paper-plane"></i>
+          <span>Disbursals</span></a>
+  </li>
+
+   
+  <li class="nav-item ">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-balances" aria-expanded="true" aria-controls="collapse-balances">
+      <i class="fas fa-fw fa-balance-scale"></i>
+      <span>Balances</span>
+    </a>
+    <div id="collapse-balances" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item " href="https://v3.virtual-pay.io/balances/a/"><i class="fas fa-fw fa-th"></i> Balance</a>
+      
+        <a class="collapse-item " href="https://v3.virtual-pay.io/balances/a/h/"><i class="fas fa fa-list-alt"></i> Transactions
+        </a>
+      
+      </div>
+    </div>
+  </li>
+  
+  <li class="nav-item ">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-settlements" aria-expanded="true" aria-controls="collapse-settlements">
+      <i class="fas fa-fw fa-balance-scale"></i>
+      <span>Settlements</span>
+    </a>
+    <div id="collapse-settlements" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item " href="https://v3.virtual-pay.io/settlements/"><i class="fas fa-fw fa-th"></i> Settlements</a>
+      
+        <a class="collapse-item " href="https://v3.virtual-pay.io/settlement/create/"><i class="fas fa fa-list-alt"></i> Create Settlement</a>
+      
+      </div>
+    </div>
+  </li>
+  
+  
+  <li class="nav-item ">
+    <a class="nav-link collapsed" href="https://v3.virtual-pay.io/reserves/a/">
+      <i class="fas fa-fw fa-balance-scale"></i>
+      <span>Reserves</span>
+    </a> 
+  </li>
+  
+
+
+ 
+    
+
+    <hr class="sidebar-divider my-0">
+      
+      
+        <li class="nav-item ">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-users" aria-expanded="true" aria-controls="collapse-users">
+                <i class="fas fa-fw fa-users"></i>
+                <span>Users</span>
+            </a>
+              <div id="collapse-users" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+                  <div class="bg-white py-2 collapse-inner rounded">
+
+                      
+                        <a class="collapse-item " href="https://v3.virtual-pay.io/users/staff"><i class="fas fa-fw fa-users"></i> Staff Users</a>
+                      
+
+                    
+                        <a class="collapse-item " href="https://v3.virtual-pay.io/users/"><i class="fas fa-fw fa-users"></i> All Users</a>
+                        
+
+                        
+                        
+                    
+
+            </div>
+          </div>
+        </li>
+
+      
+
+
+    <li class="nav-item ">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-merchants" aria-expanded="true" aria-controls="collapse-merchants">
+        <i class="fas fa-fw fa-users"></i>
+        <span>Merchants</span>
+      </a>
+      <div id="collapse-merchants" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item " href="https://v3.virtual-pay.io/m/"><i class="fas fa-fw fa-users"></i> Merchants</a>
+        
+          <a class="collapse-item " href="https://v3.virtual-pay.io/m/category_code"><i class="fas fa fa-list-alt"></i> Category Codes</a>
+        
+        </div>
+      </div>
+    </li>
+
+
+
+
+
+
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-refunds" aria-expanded="true" aria-controls="collapse-refunds">
+
+        <i class="fa fa-money" aria-hidden="true"></i>
+          <span>Refunds</span>
+        </a>
+        <div id="collapse-refunds" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">  
+              <a class="collapse-item " href="https://v3.virtual-pay.io/refunds/"><i class="fas fa fa-list-alt"></i> Refunds</a>
+          </div>
+        </div>
+      </li>
+  
+  
+
+
+  <li class="nav-item ">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-admin" aria-expanded="true" aria-controls="collapse-admin">
+      <i class="fas fa-fw fa-users"></i>
+      <span>Admin</span>
+    </a>
+        <div id="collapse-admin" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item " href="https://v3.virtual-pay.io/acquirer/"><i class="fas fa-fw fa-users"></i> Acquirers</a>
+        <a class="collapse-item " href="https://v3.virtual-pay.io/cardbrand/"><i class="fas fa-fw fa-envelope"></i> Card Brands</a>
+        <a class="collapse-item " href="https://v3.virtual-pay.io/currency/"><i class="fas fa-fw fa-dollar-sign"></i> Currencies</a>
+          <a class="collapse-item " href="https://v3.virtual-pay.io/country/"><i class="fas fa-fw fa-flag"></i> Countries</a>
+          <a class="collapse-item " href="https://v3.virtual-pay.io/momo/rate/"><i class="fas fa-fw fa-dollar-sign"></i> Mobile Money Rates</a>
+          <a class="collapse-item " href="https://v3.virtual-pay.io/exchanges/">
+          <i class="fas fa-fw fa-dollar-sign"></i>
+           Exchange
+        </a>
+           <a class="collapse-item " href="https://v3.virtual-pay.io/roles/"><i class="fas fa-fw fa-key"></i> Roles</a>      
+        <a class="collapse-item " href="https://v3.virtual-pay.io/chargebacks/">
+            <i class="fa fa-server" aria-hidden="true"></i>
+            <span>ChargeBack</span>
+        </a>
+        
+      </div>
+    </div>
+  </li>
+
+   <li class="nav-item ">
+        <a class="nav-link" href="https://v3.virtual-pay.io/blacklist/">
+        <i class="fa fa-window-close" aria-hidden="true"></i>
+            <span>Blacklist</span></a>
+  </li>
+
+
+ 
+
+ 
+ 
+
+
+
+
+ <li class="nav-item ">
+  <a class="nav-link" href="https://v3.virtual-pay.io/account/two_factor/">
+    <i class="fas fa-fw fa-user"></i>
+      <span>Account Security</span></a>
+</li>
+
+
+
+
+
+  <div class="text-center d-none d-md-inline">
+    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+  </div>
+
+
+</ul>
+        
+  
+        <!-- End Navigation -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+             <!-- Main Content -->
+             <div id="content">
+              
+              
+
+<!-- Topbar -->
+<nav class="navbar navbar-expand navbar-light topbar mb-1 static-top shadow">
+ 
+    <!-- Sidebar Toggle (Topbar) -->
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
+    <!-- Topbar Navbar -->
+  
+    <div class="sidebar-brand-text mx-3 text-nowrap" style="overflow-x: hidden;"><h3><strong>Virtual Pay</strong></h3></div>
+    <ul class="navbar-nav ml-auto">
+      <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		      <span class="mr-2 text-dark-600 "> admin</span>
+                
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="https://v3.virtual-pay.io/profile/">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="https://v3.virtual-pay.io/accounts/password/change/">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Change Password
+                </a>
+                
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://v3.virtual-pay.io/accounts/logout/">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+    </ul>
+  
+</nav>
+
+              
+              <!-- Begin Page Container Fluid -->
+              <div class="container-fluid">
+                
+                
+                
+                  <!-- Page Heading -->
+                  
+
+
+                  
+<div class="row m-3">
+    <div class="container-fluid">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+        </div>
+
+             
+
+            <div class="row">
+                <div class="d-flex justify-content-between container-fluid  mb-4">
+
+                    <div class="col-xl-5 col-md-5 mb-4" id="currency-card"><p>Please Select a Currency</p></div>
+
+                    <div class="d-flex flex-row justify-content-around">
+
+                        <div class="mr-4 ">
+
+                            <div id="reportrange" style="background: #fff; cursor: pointer; border: 1px solid #ccc; width: 100% margin:2; " class="date-picker2">
+                                <i class="fa fa-calendar"></i>&nbsp;
+                                <span>April 18, 2022 - May 17, 2022</span> <i class="fa fa-caret-down"></i>
+                            </div>
+                            
+                        </div>
+
+                        
+
+                
+
+                    <div class="dropdown ">
+                        <select id="currencySelect" name="currency_id" class="date-picker">
+                            <option selected="selected" hidden="">Select currency</option>
+                            
+                                <option value="6">GHS</option>
+                            
+                                <option value="5">TZS</option>
+                            
+                                <option value="4">UGX</option>
+                            
+                                <option value="3">EUR</option>
+                            
+                                <option value="2">USD</option>
+                            
+                                <option value="1">KES</option>
+                            
+                        </select>
+                    </div>
+
+                    </div>
+
+                </div>
+            </div>
+            
+
+        
+        <div class="row">
+            <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Transaction Statistics</h6>
+                        <div class="dropdown no-arrow">
+                            <a class="dropdown-toggle" href="#" role="button" id="droTechnologypdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-header">More</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-pie pt-4 pb-2" id="trans_stat">
+
+                            <h4 class="small font-weight-bold">Success <span class="float-right">0%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h4 class="small font-weight-bold">Processing <span class="float-right">0%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <h4 class="small font-weight-bold">Failed<span class="float-right">0%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            
+                            <h4 class="small font-weight-bold">New<span class="float-right">0%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+                        <div class="mt-4 text-center small">
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-success"></i> Success
+                            </span>
+                            <span class="mr-2">
+                                 <i class="fas fa-circle text-danger"></i> Failed
+                            </span>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-info"></i> Processing
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-8 col-lg-7">
+                <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Monthly Transactions Rate</h6>
+                        <div class="dropdown no-arrow">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-header">Dropdown Header:</div>
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <div class="chart-area"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                            <canvas id="myAreaChart" style="display: block; width: 946px; height: 320px;" class="chartjs-render-monitor" width="946" height="320"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-8 col-lg-7">
+
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Weekly Approval Rates</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-bar"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                            <canvas id="myWeeklyApprovalBarChart" style="display: block; width: 946px; height: 320px;" class="chartjs-render-monitor" width="946" height="320"></canvas>
+                        </div>
+                        <hr>
+                
+                    <code></code> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Response Codes</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-pie pt-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                            <canvas id="myPieChart" style="display: block; width: 440px; height: 253px;" class="chartjs-render-monitor" width="440" height="253"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+
+
+
+            <div class="col-xl-4 col-lg-7">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Top 10 Countries</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-bar">
+                            <canvas id="myTopCountriesBarChart"></canvas>
+                        </div>
+                   
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-xl-8 col-lg-7">
+                <div class="card shadow mb-4">
+                    <div class="d-flex flex-row justify-content-between card-header">
+                        <h6 class="m-0 font-weight-bold text-primary">Today's Collections and Disbursals</h6>
+
+                        <input type="text" id="merchantSelect" class="date-picker ml-3 ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+
+
+                        
+                    </div>
+
+         
+                    <div class="card-body">
+                        <div class="mb-4 " id="merch_trans">
+                            <p class="text-center"> Merchnat Name: <strong>VPR SAFE FINANCIAL GROUP</strong></p><table class="table table-striped table-bordered table-hover table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>Collections</th>
+                                        <th>Disbursals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    
+                                        <tr>
+                                            <td>GHS</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>TZS</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>UGX</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>EUR</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>USD</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>KES</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                    
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div class="row">
+            <div class="col-xl-12 col-lg-10 p-3">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Latest Payment Transactions</h6>
+                        <div class="dropdown no-arrow">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-header">Transactions</div>
+                                <a class="dropdown-item" href="https://v3.virtual-pay.io/payments/">More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody><tr>
+                                        <th>DateTime</th>
+                                        <th>Payment Type</th>
+                                        <th>Merchant Id</th>
+                                        <th>Transaction Number</th>
+                                        <th>Amount</th>
+                                        <th>Currency</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>March 24, 2022, 8:55 a.m.</td>
+                                        <td>Mobile Money</td>
+                                        <td>Pay Teka Limited</td>
+                                        <td>01FYXJ71CKNCH1C06EV0ZWXWGG</td>
+                                        <td>100</td>
+                                        <td>USD</td>
+                                        <td class="   text-danger "> Failed</td>
+                                        
+                                    </tr><tr>
+                                        <td>March 10, 2022, 8:52 a.m.</td>
+                                        <td>Card</td>
+                                        <td>Virtua Pay Test 2</td>
+                                        <td>REF00186688</td>
+                                        <td>100</td>
+                                        <td>USD</td>
+                                        <td class=""> Billing</td>
+                                        
+                                    </tr><tr>
+                                        <td>March 9, 2022, 8:41 a.m.</td>
+                                        <td>Mobile Money</td>
+                                        <td>MYRTLE LTD</td>
+                                        <td>01FXPXF2DNPNN8TW2ZYV7808H0</td>
+                                        <td>100000</td>
+                                        <td>KES</td>
+                                        <td class="  text-success "> Complete</td>
+                                        
+                                    </tr><tr>
+                                        <td>March 9, 2022, 8:02 a.m.</td>
+                                        <td>Mobile Money</td>
+                                        <td>MYRTLE LTD</td>
+                                        <td>01FXPV6R01KM17DVDVFGWVAEJ6</td>
+                                        <td>100</td>
+                                        <td>USD</td>
+                                        <td class="  text-success "> Complete</td>
+                                        
+                                    </tr><tr>
+                                        <td>March 9, 2022, 7:51 a.m.</td>
+                                        <td>Mobile Money</td>
+                                        <td>MYRTLE LTD</td>
+                                        <td>01FXPTK80D1FKW7VYFT8YAEH0E</td>
+                                        <td>1</td>
+                                        <td>USD</td>
+                                        <td class="  text-success "> Complete</td>
+                                        
+                                    </tr><tr>
+                                        <td>March 9, 2022, 7:48 a.m.</td>
+                                        <td>Mobile Money</td>
+                                        <td>MYRTLE LTD</td>
+                                        <td>01FXPTCM0ZKKCCX9VRGD50Y4N8</td>
+                                        <td>1</td>
+                                        <td>USD</td>
+                                        <td class="   text-danger "> Failed</td>
+                                        
+                                    </tr><tr>
+                                        <td>March 9, 2022, 6:42 a.m.</td>
+                                        <td>Mobile Money</td>
+                                        <td>MYRTLE LTD</td>
+                                        <td>01FXPPMGEAJWRET5E83WNZY2C0</td>
+                                        <td>100000</td>
+                                        <td>KES</td>
+                                        <td class="  text-success "> Complete</td>
+                                        
+                                    </tr><tr>
+                                        <td>March 5, 2022, 6:43 a.m.</td>
+                                        <td>Mobile Money</td>
+                                        <td>Pay Teka Limited</td>
+                                        <td>01FXCD2VE1PJ8ZNEBFMARE07GV</td>
+                                        <td>500000</td>
+                                        <td>USD</td>
+                                        <td class="  text-success "> Complete</td>
+                                        
+                                    </tr><tr>
+                                        <td>March 4, 2022, 1:42 p.m.</td>
+                                        <td>Mobile Money</td>
+                                        <td>MYRTLE LTD</td>
+                                        <td>01FXAJPJAQC1HS5GE76S44VBJB</td>
+                                        <td>5000</td>
+                                        <td>USD</td>
+                                        <td class="  text-success "> Complete</td>
+                                        
+                                    </tr><tr>
+                                        <td>March 4, 2022, 1:42 p.m.</td>
+                                        <td>Mobile Money</td>
+                                        <td>MYRTLE LTD</td>
+                                        <td>01FXAJP7SKN628TE6EB29J960M</td>
+                                        <td>50000</td>
+                                        <td>USD</td>
+                                        <td class="  text-success "> Complete</td>
+                                        
+                                </tr></tbody></table>
+                            </div>
+              
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <script src="v3.virtual-pay.io_files/jquery_002.js"></script>
+        <script src="v3.virtual-pay.io_files/jquery-ui.js"></script>
+        <script type="text/javascript" src="v3.virtual-pay.io_files/moment.js"></script>
+        <script type="text/javascript" src="v3.virtual-pay.io_files/daterangepicker.js"></script>
+        
+        <script type="text/javascript">
+
+
+            var availableTags = [{'business_name': 'VPR SAFE FINANCIAL GROUP', 'id': 20}, {'business_name': 'MYRTLE LTD', 'id': 19}, {'business_name': 'HPAK Motors', 'id': 17}, {'business_name': 'Reboot24', 'id': 10}, {'business_name': 'Reboot', 'id': 9}, {'business_name': 'Forex', 'id': 8}, {'business_name': 'Forex', 'id': 7}, {'business_name': 'joyken', 'id': 6}, {'business_name': 'Test', 'id': 5}, {'business_name': 'Partner  Merchant', 'id': 4}, {'business_name': 'Virtualpay ORG', 'id': 3}, {'business_name': 'Virtua Pay Test 2', 'id': 2}, {'business_name': 'Pay Teka Limited', 'id': 1}];
+
+          
+                function AutoCompleteSelectHandler(event, ui){               
+                    var selectedObj = ui.item;              
+
+                    var $this = $(this);
+                    let merchantId = ''
+
+                     merchantId = availableTags.filter(function(item){
+                        return item.business_name == selectedObj.value})[0].id;
+
+
+
+                    let ht=`
+                    <div class="d-flex justify-content-center mt-5">
+                        <div class="spinner-border text-success" role="status"></div>
+                    </div>
+
+                    `
+
+            
+                    $.ajax({
+                        type: "POST",
+                        data: {
+                        'merchantId': merchantId,
+                        'csrfmiddlewaretoken': 'wT9BJgjLLyq0aX8lybkcSTHHWrIugefeZOsJMIwaEqhsVZZuhRjArwqvcIVmPyWz',
+                        },
+                        dataType: "json",
+
+                        success: function (tranxs) {  
+
+                            if (tranxs) {
+                                ht = `<table class="table table-striped table-bordered table-hover table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Currency</th>
+                                                <th>Collections</th>
+                                                <th>Disbursals</th>
+                                            </tr>
+                                        </thead>
+                                <tbody>`
+                                tranxs.transaction.forEach(function (tranx) {
+                                    ht += `<tr>
+                                        <td>${tranx.Currency}</td>
+                                        <td>${tranx.Transactions}</td>
+                                        <td>${tranx.Disbursal}</td>
+                                    </tr>`
+                                })
+                                ht += `</tbody></table>`
+                            } else {
+                                ht = `<h5 class="text-primary">No Transactions</h5>`
+                            }
+
+                            $('#merch_trans').html(ht);
+                        }
+
+
+                    });
+                    $('#merch_trans').html(ht);
+
+
+        }
+
+
+
+    
+
+                $("#merchantSelect").autocomplete({
+                    source: availableTags.map((item) => {
+                        return item.business_name;
+                    }),
+
+                    select: function(event, ui) { 
+                        AutoCompleteSelectHandler(event, ui)
+                    }
+            });
+
+
+                var start = moment().subtract(29, 'days');
+                var end = moment();
+            
+                function cb(start, end) {
+                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                    let currency = $('#currencySelect').val();
+
+                    html = `<h5 class="text-primary">Updating......</h5>`
+                    let  merchHtml=html
+               
+
+                    let date = [start.format('YYYY-MM-DD'), end.format('YYYY-MM-DD')]
+
+                    if(!date.length){
+                        html = `<p>Please Select a Date</p>`
+                    }
+
+                    if(!isNumeric(currency)){
+                        html = `<p class="text-danger text-bold"><strong>Kindly Select a Currency !!</strong></p>`
+                    }
+
+                    console.log(date)
+
+                    if (date.length && !!isNumeric(currency)){
+
+                        $.ajax({
+                            type: "POST",
+                            data: {
+                                startDate: date[0],
+                                endDate: date[1],
+                                currencyId: currency,
+                                'csrfmiddlewaretoken': 'wT9BJgjLLyq0aX8lybkcSTHHWrIugefeZOsJMIwaEqhsVZZuhRjArwqvcIVmPyWz',
+                            },
+                            dataType: "json",
+                            success: function(json){
+                                balance=json.balances[0]
+
+
+                               let statistics=json.statistics
+
+                                if (balance) {
+                                  html = ` 
+                                        <div class="card border-left-${balance.style} shadow py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                            ${balance.currency}</div>
+                                                        <div class='d-flex justify-content-around'>
+                                                            <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-down text-success">In</i> </span> ${ balance.balance }</div>
+                                                            <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-up text-info">Out</i> </span> ${balance.out}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <p class="text-gray-300 ">${balance.currency}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        `;
+
+                       
+                                        $('#currency-card').html(html);
+
+
+                                }
+                                if (statistics){
+                                        merchHtml=`
+                                        <h4 class="small font-weight-bold">Success <span class="float-right">${statistics.Success}%</span></h4>
+                                        <div class="progress mb-4">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: ${statistics.Success}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <h4 class="small font-weight-bold">Processing <span class="float-right">${statistics.Processing}%</span></h4>
+                                        <div class="progress mb-4">
+                                            <div class="progress-bar bg-info" role="progressbar" style="width: ${statistics.Processing}%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <h4 class="small font-weight-bold">Failed<span class="float-right">${statistics.Failed}%</span></h4>
+                                        <div class="progress mb-4">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${statistics.Failed}%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    `
+    
+                                    console.log("PAP_BLAZE")
+
+                                    $('#trans_stat').html(merchHtml);
+    
+                                }
+               
+
+                            }
+
+                     
+                            
+                        });
+                    }
+                
+
+                    $('#currency-card').html(html);
+                }
+            
+                $('#reportrange').daterangepicker({
+                    startDate: start,
+                    endDate: end,
+                    ranges: {
+                       'Today': [moment(), moment()],
+                       'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                       'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                       'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                       'This Month': [moment().startOf('month'), moment().endOf('month')],
+                       'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    }
+                }, cb);
+            
+                cb(start, end);
+            
+        
+
+
+
+
+
+
+        var  html = `<p>Please Select a Currency</p>`
+
+        function isNumeric(str) {
+            if (typeof str != "string") return false 
+            return !isNaN(str) && 
+                   !isNaN(parseFloat(str)) 
+          }
+
+
+        $('#date-picker').change(function(){
+
+            let date = $('#date-picker').val();
+            let currency = $('#currencySelect').val();
+
+            html = `<h5 class="text-primary">Updating......</h5>`
+             
+            if(!date){
+                html = `<p>Please Select a Date</p>`
+            }
+
+            if(!isNumeric(currency)){
+                html = `<p class="text-danger text-bold"><strong>Kindly Select a Currency !!</strong></p>`
+            }
+
+
+
+                 if (date && !!isNumeric(currency)){
+             //   console.log(date,currency);
+            $.ajax({
+                type: "POST",
+                data: {
+                    date: date,
+                    currencyId: currency,
+                    'csrfmiddlewaretoken': 'wT9BJgjLLyq0aX8lybkcSTHHWrIugefeZOsJMIwaEqhsVZZuhRjArwqvcIVmPyWz',
+                },
+                dataType: "json",
+                success: function(json){
+                    balance=json.balances[0]
+                    if (balance) {
+
+                      html = ` 
+
+                            <div class="card border-left-${balance.style} shadow py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                ${balance.currency}</div>
+                                            <div class='d-flex justify-content-around'>
+                                                <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-down text-success">In</i> </span> ${ balance.balance }</div>
+                                                <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-up text-info">Out</i> </span> ${balance.out}</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <p class="text-gray-300 ">${balance.currency}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            `;
+                    }
+   
+                    $('#currency-card').html(html);
+
+                }
+                
+            });
+
+        }
+
+            $('#currency-card').html(html);
+
+        });
+
+
+
+        let topCountriesCtx = document.getElementById("myTopCountriesBarChart");
+
+        let topTen = []
+
+
+        if(topTen.length>0){
+
+        let sorted_contr =topTen.sort((a,b)=>b.n - a.n)
+        let countries = sorted_contr.map(c=>c.country)
+        let country_counts = sorted_contr.map(c=>c.n)
+        let topCountriesData = {
+            labels:countries,
+            datasets: [{
+                label: "Country",
+                data: country_counts,
+                backgroundColor: ["#669911", "#119966"],
+                hoverBackgroundColor: ["#66A2EB", "#FCCE56"]
+            }]
+        };
+
+
+
+
+
+
+        let topCountriesChat = new Chart(topCountriesCtx, {
+            type: 'horizontalBar',
+            data: topCountriesData,
+            options: {
+              maintainAspectRatio: false,
+              layout: {
+                padding: {
+                  left: 10,
+                  right: 25,
+                  top: 25,
+                  bottom: 0
+                }
+              },
+              scales: {
+                xAxes: [{
+
+                    
+                  time: {
+                    unit: 'month'
+                  },
+                  stacked: true,
+                  gridLines: {
+                    display: false,
+                    drawBorder: false
+                  },
+                  ticks: {
+                    maxTicksLimit: 6
+                  },
+
+                barThickness: 6,  // number (pixels) or 'flex'
+                maxBarThickness: 8 // number (pixels)
+                }],
+                yAxes: [{
+                  ticks: {
+                    min: 0,
+                 
+                    padding: 10,
+                    // Include a dollar sign in the ticks
+            
+                  },
+                  stacked: true,
+                  gridLines: {
+                    color: "rgb(234, 236, 244)",
+                    zeroLineColor: "rgb(234, 236, 244)",
+                    drawBorder: false,
+                    borderDash: [2],
+                    zeroLineBorderDash: [2]
+                  }
+
+                }],
+              },
+              legend: {
+                position: 'right'
+              },
+              tooltips: {
+                titleMarginBottom: 10,
+                titleFontColor: '#6e707e',
+                titleFontSize: 14,
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+      
+              },
+            }
+          });
+
+
+        }
+
+    
+         $('#currencySelect').on('change', function() {
+                   
+
+
+                        var bal = ''
+                        var $this = $(this);
+                        let currencyId = ''
+                        let day=''
+                        let month=''
+                        let year=''
+
+                        if ($this.find('option:selected').index() !== 0) {
+                           html = `<div class="spinner-border text-warning" role="status"></div>`
+                            currencyId = $this.find('option:selected').val()
+                        }
+
+
+
+            const postFunc = ({currencyId,month,year,day}) =>{
+                return $.ajax({
+                    type: "POST",
+                    data: {
+                    'currencyId': currencyId,
+                    'month':month,
+                    'year':year,
+                    "day":day,
+                    'csrfmiddlewaretoken': 'wT9BJgjLLyq0aX8lybkcSTHHWrIugefeZOsJMIwaEqhsVZZuhRjArwqvcIVmPyWz',
+                    },
+                    dataType: "json",
+                    success: function (json) {  
+                    balance=json.balances[0]
+                    statistics= json.statistics
+                    console.log(json)
+                    if (balance) {
+
+                      html = ` 
+                            <div class="card border-left-${balance.style} shadow py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                ${balance.currency}</div>
+                                            <div class='d-flex justify-content-around'>
+                                                <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-down text-success">In</i> </span> ${ balance.balance }</div>
+                                                <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-up text-info">Out</i> </span> ${balance.out}</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <p class="text-gray-300 ">${balance.currency}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            `;
+
+
+                    }
+
+                    if (statistics){
+                        merchHtml=`
+                        <h4 class="small font-weight-bold">Success <span class="float-right">${statistics.Success}%</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: ${statistics.Success}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4 class="small font-weight-bold">Processing <span class="float-right">${statistics.Processing}%</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: ${statistics.Processing}%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4 class="small font-weight-bold">Failed<span class="float-right">${statistics.Failed}%</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${statistics.Failed}%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    `
+                    $('#trans_stat').html(merchHtml);
+
+                }
+   
+                    $('#currency-card').html(html);
+
+                    }
+                    });
+                }
+
+
+                $('#dates').change(function (event) {
+                    if ($("#day").is(':checked')) {
+                        currencyId = $("#currencySelect").val()
+                        html = `<h5 class="text-primary">Updating......</h5>`
+
+                        if (!currencyId) {
+                           currencyId = 1
+                        }
+
+                         month =  $('#month').val();
+                         day = $("#day").val()
+                         year= new Date().getFullYear()
+                         postFunc({currencyId,day})
+
+                    } else if ($("#year").is(':checked')) {
+                        currencyId = $("#currencySelect").val()
+                        html = `<h5 class="text-primary">Updating......</h5>`
+
+
+                        year = new Date().getFullYear()
+                        if (!currencyId) {
+                           currencyId = 1
+                        }
+                         postFunc({currencyId,year})
+
+                    } else if ($("#month").is(':checked')) {
+                        month = $('#month').val()
+                        currencyId = $("#currencySelect").val()
+                        html = `<h5 class="text-primary">Updating......</h5>`
+
+
+                        if (!currencyId) {
+                            currencyId = 1
+                        }
+
+                        postFunc({currencyId,month})
+                    }
+                   $('#currency-card').html(html);
+                });
+
+
+                postFunc({currencyId,month,year,day})
+
+                $('#currency-card').html(html);
+
+            }).change();
+
+
+
+          
+
+
+
+
+
+
+
+            var ctx = document.getElementById("myAreaChart");
+
+            var dat = {'f_list': [{'month_name': 'Mar', 'month': 1, 'year': 2022, 'count': 1}, {'month_name': 'Mar', 'month': 2, 'year': 2022, 'count': 1}, {'month_name': 'Mar', 'month': 3, 'year': 2022, 'count': 2}], 's_list': [{'month_name': 'Jan', 'month': 1, 'year': 2022, 'count': 71}, {'month_name': 'Feb', 'month': 2, 'year': 2022, 'count': 25}, {'month_name': 'Mar', 'month': 3, 'year': 2022, 'count': 24}]} 
+
+            let suc_trans = dat.s_list
+            let fld_trans= dat.f_list
+
+         
+            const defaults = [{
+              month:"Jan",
+              merch:0
+            },{
+              month:"Feb",
+              merch:0
+            },{
+              month:"Mar",
+              merch:0
+            },{
+              month:"Apr",
+              merch:0
+            },{
+              month:"May",
+              merch:0
+            },{
+              month:"Jun",
+              merch:0
+            },{
+              month:"Jul",
+              merch:0
+            },{
+              month:"Aug",
+              merch:0
+            },{
+              month:"Sep",
+              merch:0
+            },{
+              month:"Oct",
+              merch:0
+            },{
+              month:"Nov",
+              merch:0
+            },{
+              month:"Dec",
+              merch:0
+            },]
+
+          lab = defaults.map(function(item) {
+                return item.month;
+            });
+
+           count = defaults.map(function(item) {
+                const p = suc_trans.find((x) => x.month_name === item.month)
+                return p ? p.count : item.merch;
+            });
+
+            fcount = defaults.map(function(item) {
+                const p = fld_trans.find((x) => x.month_name === item.month)
+                return p ? p.count : item.merch;
+            });
+
+            var lbs = defaults.map(function(item) {
+                item.month === lab[0] ? item.merch = count[0] : item.merch = 0;
+            });
+
+            var f_lbs = defaults.map(function(item) {
+                item.month === lab[0] ? item.merch = fcount[0] : item.merch = 0;
+            });
+
+
+            let li_data ={
+                labels: lab,
+
+                datasets: [{
+                    label: "Success",
+                    lineTension: 0.3,
+                    backgroundColor: "rgba(78, 115, 223, 0.05)",
+                    borderColor: "rgba(78, 115, 223, 1)",
+                    pointRadius: 3,
+                    pointBackgroundColor: "rgba(78, 115, 223, 1)",
+                    pointBorderColor: "rgba(78, 115, 223, 1)",
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+                    pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+                    pointHitRadius: 10,
+                    pointBorderWidth: 2,
+                    data: count,
+                },
+
+                {
+                    label: "Failed",
+                    lineTension: 0.3,
+                    backgroundColor: "rgba(78, 115, 223, 0.05)",
+                    borderColor: "red",
+                    pointRadius: 3,
+                    pointBackgroundColor: "red",
+                    pointBorderColor: "red",
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: "red",
+                    pointHoverBorderColor: "red",
+                    pointHitRadius: 10,
+                    pointBorderWidth: 2,
+                    data: fcount,
+                }
+                
+                ],
+            }
+
+
+            var myLineChart = new Chart(ctx, {
+                type: 'line',
+                data: li_data,
+                options: {
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: {
+                            left: 10,
+                            right: 25,
+                            top: 25,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            time: {
+                                unit: 'date'
+                            },
+                            gridLines: {
+                                display: false,
+                                drawBorder: false
+                            },
+                            ticks: {
+                                maxTicksLimit: 7
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                maxTicksLimit: 5,
+                                padding: 10,
+                            },
+                            gridLines: {
+                                color: "rgb(234, 236, 244)",
+                                zeroLineColor: "rgb(234, 236, 244)",
+                                drawBorder: false,
+                                borderDash: [2],
+                                zeroLineBorderDash: [2]
+                            }
+                        }],
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        backgroundColor: "rgb(255,255,255)",
+                        bodyFontColor: "#858796",
+                        titleMarginBottom: 10,
+                        titleFontColor: '#6e707e',
+                        titleFontSize: 14,
+                        borderColor: '#dddfeb',
+                        borderWidth: 1,
+                        xPadding: 15,
+                        yPadding: 15,
+                        displayColors: false,
+                        intersect: false,
+                        mode: 'index',
+                        caretPadding: 10,
+                        callbacks: {
+                            label: function(tooltipItem, chart) {
+                                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                                return datasetLabel
+                            }
+                        }
+                    }
+                }
+            });
+
+
+        // This is the Approval Rates Bar
+
+
+
+
+
+            var ctx = document.getElementById("myWeeklyApprovalBarChart");
+
+
+
+            let weekly = {'Monday': {'count': 0, 'success': 0, 'failed': 0}, 'Tuesday': {'count': 0, 'success': 0, 'failed': 0}, 'Wednesday': {'count': 0, 'success': 0, 'failed': 0}, 'Thursday': {'count': 0, 'success': 0, 'failed': 0}, 'Friday': {'count': 0, 'success': 0, 'failed': 0}, 'Saturday': {'count': 0, 'success': 0, 'failed': 0}, 'Sunday': {'count': 0, 'success': 0, 'failed': 0}}
+
+
+
+            let success=[
+                weekly.Monday.success,
+                weekly.Tuesday.success,
+                weekly.Wednesday.success,
+                weekly.Thursday.success,
+                weekly.Friday.success,
+                weekly.Saturday.success,
+                weekly.Sunday.success,
+            ]
+
+            let failed=[
+                weekly.Monday.failed,
+                weekly.Tuesday.failed,
+                weekly.Wednesday.failed,
+                weekly.Thursday.failed,
+                weekly.Friday.failed,
+                weekly.Saturday.failed,
+                weekly.Sunday.failed,
+            ]
+
+            
+            let days = ["Monday", "Tuesday", "Wednesday", "Thursday", 'Friday', 'Saturday', 'Sunday']
+         
+
+
+            
+
+            var dat = {
+                labels: days,
+                datasets: [
+                    {
+                        label: "Success",
+                        backgroundColor: "#4e73df",
+                        data: success
+                    },
+                    {
+                        label: "Failed",
+                        backgroundColor: "red",
+                        data: failed
+                    },
+                ]
+            }
+
+
+            var myWeeklyApprovalBarChart = new Chart(ctx, {
+                type: 'bar',
+                data: dat,
+                options: {
+                  maintainAspectRatio: false,
+                  layout: {
+                    padding: {
+                      left: 10,
+                      right: 25,
+                      top: 25,
+                      bottom: 0
+                    }
+                  },
+                  scales: {
+                    xAxes: [{
+                      time: {
+                        unit: 'month'
+                      },
+                      stacked: true,
+                      gridLines: {
+                        display: false,
+                        drawBorder: false
+                      },
+                      ticks: {
+                        maxTicksLimit: 6
+                      },
+                      maxBarThickness: 50,
+                    }],
+                    yAxes: [{
+                      ticks: {
+                        min: 0,
+                     
+                        padding: 10,
+                        // Include a dollar sign in the ticks
+                
+                      },
+                      stacked: true,
+                      gridLines: {
+                        color: "rgb(234, 236, 244)",
+                        zeroLineColor: "rgb(234, 236, 244)",
+                        drawBorder: false,
+                        borderDash: [2],
+                        zeroLineBorderDash: [2]
+                      }
+                    }],
+                  },
+                  legend: {
+                    position: 'right'
+                  },
+                  tooltips: {
+                    titleMarginBottom: 10,
+                    titleFontColor: '#6e707e',
+                    titleFontSize: 14,
+                    backgroundColor: "rgb(255,255,255)",
+                    bodyFontColor: "#858796",
+                    borderColor: '#dddfeb',
+                    borderWidth: 1,
+                    xPadding: 15,
+                    yPadding: 15,
+                    displayColors: false,
+                    caretPadding: 10,
+          
+                  },
+                }
+              });
+              
+
+            
+        // This is the Pie Chart Code
+
+        let responseCodes = []
+
+        let labels = responseCodes.map(function(item) {
+            return item.response_code;
+        });
+
+        let values = responseCodes.map(function(item) {
+            return item.n;
+        });
+
+        var p = document.getElementById("myPieChart");
+
+        var myPieChart = new Chart(p, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+            data: values,
+            backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+            hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+            hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            caretPadding: 10,
+            },
+            legend: {
+            display: false
+            },
+            cutoutPercentage: 80,
+        },
+        });
+
+        
+
+
+        </script>
+
+
+
+         
+              </div> <!-- End Page Container Fluid -->
+             </div> <!-- End Main Content -->
+            
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+			    <span>© <script>document.write(new Date().getFullYear())</script>2022
+</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+            
+            
+
+        </div> <!-- End Content Wrapper -->
+    </div> <!-- End Page Wrapper -->
+ <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="https://v3.virtual-pay.io/accounts/logout/">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Bootstrap core JavaScript-->
+   
+      <script src="v3.virtual-pay.io_files/jquery-3.js"></script>
+   
+    <script src="v3.virtual-pay.io_files/jquery.js"></script> 
+  <script src="v3.virtual-pay.io_files/bootstrap.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  
+
+  <!-- Custom scripts for all pages-->
+  <script src="v3.virtual-pay.io_files/sb-admin-2.js"></script>
+  <!-- Page level plugins -->
+    <script src="v3.virtual-pay.io_files/Chart.js"></script>
+      <script src="v3.virtual-pay.io_files/chart-area.js"></script>
+      <script src="v3.virtual-pay.io_files/chart-pie.js"></script>
+
+
+        <script src="v3.virtual-pay.io_files/jquery_002.js"></script>
+        <script src="v3.virtual-pay.io_files/jquery-ui.js"></script>
+        <script type="text/javascript" src="v3.virtual-pay.io_files/moment.js"></script>
+        <script type="text/javascript" src="v3.virtual-pay.io_files/daterangepicker.js"></script>
+        
+        <script type="text/javascript">
+
+
+            var availableTags = [{'business_name': 'VPR SAFE FINANCIAL GROUP', 'id': 20}, {'business_name': 'MYRTLE LTD', 'id': 19}, {'business_name': 'HPAK Motors', 'id': 17}, {'business_name': 'Reboot24', 'id': 10}, {'business_name': 'Reboot', 'id': 9}, {'business_name': 'Forex', 'id': 8}, {'business_name': 'Forex', 'id': 7}, {'business_name': 'joyken', 'id': 6}, {'business_name': 'Test', 'id': 5}, {'business_name': 'Partner  Merchant', 'id': 4}, {'business_name': 'Virtualpay ORG', 'id': 3}, {'business_name': 'Virtua Pay Test 2', 'id': 2}, {'business_name': 'Pay Teka Limited', 'id': 1}];
+
+          
+                function AutoCompleteSelectHandler(event, ui){               
+                    var selectedObj = ui.item;              
+
+                    var $this = $(this);
+                    let merchantId = ''
+
+                     merchantId = availableTags.filter(function(item){
+                        return item.business_name == selectedObj.value})[0].id;
+
+
+
+                    let ht=`
+                    <div class="d-flex justify-content-center mt-5">
+                        <div class="spinner-border text-success" role="status"></div>
+                    </div>
+
+                    `
+
+            
+                    $.ajax({
+                        type: "POST",
+                        data: {
+                        'merchantId': merchantId,
+                        'csrfmiddlewaretoken': 'wT9BJgjLLyq0aX8lybkcSTHHWrIugefeZOsJMIwaEqhsVZZuhRjArwqvcIVmPyWz',
+                        },
+                        dataType: "json",
+
+                        success: function (tranxs) {  
+
+                            if (tranxs) {
+                                ht = `<table class="table table-striped table-bordered table-hover table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Currency</th>
+                                                <th>Collections</th>
+                                                <th>Disbursals</th>
+                                            </tr>
+                                        </thead>
+                                <tbody>`
+                                tranxs.transaction.forEach(function (tranx) {
+                                    ht += `<tr>
+                                        <td>${tranx.Currency}</td>
+                                        <td>${tranx.Transactions}</td>
+                                        <td>${tranx.Disbursal}</td>
+                                    </tr>`
+                                })
+                                ht += `</tbody></table>`
+                            } else {
+                                ht = `<h5 class="text-primary">No Transactions</h5>`
+                            }
+
+                            $('#merch_trans').html(ht);
+                        }
+
+
+                    });
+                    $('#merch_trans').html(ht);
+
+
+        }
+
+
+
+    
+
+                $("#merchantSelect").autocomplete({
+                    source: availableTags.map((item) => {
+                        return item.business_name;
+                    }),
+
+                    select: function(event, ui) { 
+                        AutoCompleteSelectHandler(event, ui)
+                    }
+            });
+
+
+                var start = moment().subtract(29, 'days');
+                var end = moment();
+            
+                function cb(start, end) {
+                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                    let currency = $('#currencySelect').val();
+
+                    html = `<h5 class="text-primary">Updating......</h5>`
+                    let  merchHtml=html
+               
+
+                    let date = [start.format('YYYY-MM-DD'), end.format('YYYY-MM-DD')]
+
+                    if(!date.length){
+                        html = `<p>Please Select a Date</p>`
+                    }
+
+                    if(!isNumeric(currency)){
+                        html = `<p class="text-danger text-bold"><strong>Kindly Select a Currency !!</strong></p>`
+                    }
+
+                    console.log(date)
+
+                    if (date.length && !!isNumeric(currency)){
+
+                        $.ajax({
+                            type: "POST",
+                            data: {
+                                startDate: date[0],
+                                endDate: date[1],
+                                currencyId: currency,
+                                'csrfmiddlewaretoken': 'wT9BJgjLLyq0aX8lybkcSTHHWrIugefeZOsJMIwaEqhsVZZuhRjArwqvcIVmPyWz',
+                            },
+                            dataType: "json",
+                            success: function(json){
+                                balance=json.balances[0]
+
+
+                               let statistics=json.statistics
+
+                                if (balance) {
+                                  html = ` 
+                                        <div class="card border-left-${balance.style} shadow py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                            ${balance.currency}</div>
+                                                        <div class='d-flex justify-content-around'>
+                                                            <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-down text-success">In</i> </span> ${ balance.balance }</div>
+                                                            <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-up text-info">Out</i> </span> ${balance.out}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <p class="text-gray-300 ">${balance.currency}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        `;
+
+                       
+                                        $('#currency-card').html(html);
+
+
+                                }
+                                if (statistics){
+                                        merchHtml=`
+                                        <h4 class="small font-weight-bold">Success <span class="float-right">${statistics.Success}%</span></h4>
+                                        <div class="progress mb-4">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: ${statistics.Success}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <h4 class="small font-weight-bold">Processing <span class="float-right">${statistics.Processing}%</span></h4>
+                                        <div class="progress mb-4">
+                                            <div class="progress-bar bg-info" role="progressbar" style="width: ${statistics.Processing}%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <h4 class="small font-weight-bold">Failed<span class="float-right">${statistics.Failed}%</span></h4>
+                                        <div class="progress mb-4">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${statistics.Failed}%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    `
+    
+                                    console.log("PAP_BLAZE")
+
+                                    $('#trans_stat').html(merchHtml);
+    
+                                }
+               
+
+                            }
+
+                     
+                            
+                        });
+                    }
+                
+
+                    $('#currency-card').html(html);
+                }
+            
+                $('#reportrange').daterangepicker({
+                    startDate: start,
+                    endDate: end,
+                    ranges: {
+                       'Today': [moment(), moment()],
+                       'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                       'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                       'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                       'This Month': [moment().startOf('month'), moment().endOf('month')],
+                       'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    }
+                }, cb);
+            
+                cb(start, end);
+            
+        
+
+
+
+
+
+
+        var  html = `<p>Please Select a Currency</p>`
+
+        function isNumeric(str) {
+            if (typeof str != "string") return false 
+            return !isNaN(str) && 
+                   !isNaN(parseFloat(str)) 
+          }
+
+
+        $('#date-picker').change(function(){
+
+            let date = $('#date-picker').val();
+            let currency = $('#currencySelect').val();
+
+            html = `<h5 class="text-primary">Updating......</h5>`
+             
+            if(!date){
+                html = `<p>Please Select a Date</p>`
+            }
+
+            if(!isNumeric(currency)){
+                html = `<p class="text-danger text-bold"><strong>Kindly Select a Currency !!</strong></p>`
+            }
+
+
+
+                 if (date && !!isNumeric(currency)){
+             //   console.log(date,currency);
+            $.ajax({
+                type: "POST",
+                data: {
+                    date: date,
+                    currencyId: currency,
+                    'csrfmiddlewaretoken': 'wT9BJgjLLyq0aX8lybkcSTHHWrIugefeZOsJMIwaEqhsVZZuhRjArwqvcIVmPyWz',
+                },
+                dataType: "json",
+                success: function(json){
+                    balance=json.balances[0]
+                    if (balance) {
+
+                      html = ` 
+
+                            <div class="card border-left-${balance.style} shadow py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                ${balance.currency}</div>
+                                            <div class='d-flex justify-content-around'>
+                                                <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-down text-success">In</i> </span> ${ balance.balance }</div>
+                                                <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-up text-info">Out</i> </span> ${balance.out}</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <p class="text-gray-300 ">${balance.currency}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            `;
+                    }
+   
+                    $('#currency-card').html(html);
+
+                }
+                
+            });
+
+        }
+
+            $('#currency-card').html(html);
+
+        });
+
+
+
+        let topCountriesCtx = document.getElementById("myTopCountriesBarChart");
+
+        let topTen = []
+
+
+        if(topTen.length>0){
+
+        let sorted_contr =topTen.sort((a,b)=>b.n - a.n)
+        let countries = sorted_contr.map(c=>c.country)
+        let country_counts = sorted_contr.map(c=>c.n)
+        let topCountriesData = {
+            labels:countries,
+            datasets: [{
+                label: "Country",
+                data: country_counts,
+                backgroundColor: ["#669911", "#119966"],
+                hoverBackgroundColor: ["#66A2EB", "#FCCE56"]
+            }]
+        };
+
+
+
+
+
+
+        let topCountriesChat = new Chart(topCountriesCtx, {
+            type: 'horizontalBar',
+            data: topCountriesData,
+            options: {
+              maintainAspectRatio: false,
+              layout: {
+                padding: {
+                  left: 10,
+                  right: 25,
+                  top: 25,
+                  bottom: 0
+                }
+              },
+              scales: {
+                xAxes: [{
+
+                    
+                  time: {
+                    unit: 'month'
+                  },
+                  stacked: true,
+                  gridLines: {
+                    display: false,
+                    drawBorder: false
+                  },
+                  ticks: {
+                    maxTicksLimit: 6
+                  },
+
+                barThickness: 6,  // number (pixels) or 'flex'
+                maxBarThickness: 8 // number (pixels)
+                }],
+                yAxes: [{
+                  ticks: {
+                    min: 0,
+                 
+                    padding: 10,
+                    // Include a dollar sign in the ticks
+            
+                  },
+                  stacked: true,
+                  gridLines: {
+                    color: "rgb(234, 236, 244)",
+                    zeroLineColor: "rgb(234, 236, 244)",
+                    drawBorder: false,
+                    borderDash: [2],
+                    zeroLineBorderDash: [2]
+                  }
+
+                }],
+              },
+              legend: {
+                position: 'right'
+              },
+              tooltips: {
+                titleMarginBottom: 10,
+                titleFontColor: '#6e707e',
+                titleFontSize: 14,
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+      
+              },
+            }
+          });
+
+
+        }
+
+    
+         $('#currencySelect').on('change', function() {
+                   
+
+
+                        var bal = ''
+                        var $this = $(this);
+                        let currencyId = ''
+                        let day=''
+                        let month=''
+                        let year=''
+
+                        if ($this.find('option:selected').index() !== 0) {
+                           html = `<div class="spinner-border text-warning" role="status"></div>`
+                            currencyId = $this.find('option:selected').val()
+                        }
+
+
+
+            const postFunc = ({currencyId,month,year,day}) =>{
+                return $.ajax({
+                    type: "POST",
+                    data: {
+                    'currencyId': currencyId,
+                    'month':month,
+                    'year':year,
+                    "day":day,
+                    'csrfmiddlewaretoken': 'wT9BJgjLLyq0aX8lybkcSTHHWrIugefeZOsJMIwaEqhsVZZuhRjArwqvcIVmPyWz',
+                    },
+                    dataType: "json",
+                    success: function (json) {  
+                    balance=json.balances[0]
+                    statistics= json.statistics
+                    console.log(json)
+                    if (balance) {
+
+                      html = ` 
+                            <div class="card border-left-${balance.style} shadow py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                ${balance.currency}</div>
+                                            <div class='d-flex justify-content-around'>
+                                                <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-down text-success">In</i> </span> ${ balance.balance }</div>
+                                                <div class=" mb-0 font-weight-bold text-gray-800"><span><i class="fas fa-arrow-up text-info">Out</i> </span> ${balance.out}</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <p class="text-gray-300 ">${balance.currency}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            `;
+
+
+                    }
+
+                    if (statistics){
+                        merchHtml=`
+                        <h4 class="small font-weight-bold">Success <span class="float-right">${statistics.Success}%</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: ${statistics.Success}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4 class="small font-weight-bold">Processing <span class="float-right">${statistics.Processing}%</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: ${statistics.Processing}%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4 class="small font-weight-bold">Failed<span class="float-right">${statistics.Failed}%</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${statistics.Failed}%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    `
+                    $('#trans_stat').html(merchHtml);
+
+                }
+   
+                    $('#currency-card').html(html);
+
+                    }
+                    });
+                }
+
+
+                $('#dates').change(function (event) {
+                    if ($("#day").is(':checked')) {
+                        currencyId = $("#currencySelect").val()
+                        html = `<h5 class="text-primary">Updating......</h5>`
+
+                        if (!currencyId) {
+                           currencyId = 1
+                        }
+
+                         month =  $('#month').val();
+                         day = $("#day").val()
+                         year= new Date().getFullYear()
+                         postFunc({currencyId,day})
+
+                    } else if ($("#year").is(':checked')) {
+                        currencyId = $("#currencySelect").val()
+                        html = `<h5 class="text-primary">Updating......</h5>`
+
+
+                        year = new Date().getFullYear()
+                        if (!currencyId) {
+                           currencyId = 1
+                        }
+                         postFunc({currencyId,year})
+
+                    } else if ($("#month").is(':checked')) {
+                        month = $('#month').val()
+                        currencyId = $("#currencySelect").val()
+                        html = `<h5 class="text-primary">Updating......</h5>`
+
+
+                        if (!currencyId) {
+                            currencyId = 1
+                        }
+
+                        postFunc({currencyId,month})
+                    }
+                   $('#currency-card').html(html);
+                });
+
+
+                postFunc({currencyId,month,year,day})
+
+                $('#currency-card').html(html);
+
+            }).change();
+
+
+
+          
+
+
+
+
+
+
+
+            var ctx = document.getElementById("myAreaChart");
+
+            var dat = {'f_list': [{'month_name': 'Mar', 'month': 1, 'year': 2022, 'count': 1}, {'month_name': 'Mar', 'month': 2, 'year': 2022, 'count': 1}, {'month_name': 'Mar', 'month': 3, 'year': 2022, 'count': 2}], 's_list': [{'month_name': 'Jan', 'month': 1, 'year': 2022, 'count': 71}, {'month_name': 'Feb', 'month': 2, 'year': 2022, 'count': 25}, {'month_name': 'Mar', 'month': 3, 'year': 2022, 'count': 24}]} 
+
+            let suc_trans = dat.s_list
+            let fld_trans= dat.f_list
+
+         
+            const defaults = [{
+              month:"Jan",
+              merch:0
+            },{
+              month:"Feb",
+              merch:0
+            },{
+              month:"Mar",
+              merch:0
+            },{
+              month:"Apr",
+              merch:0
+            },{
+              month:"May",
+              merch:0
+            },{
+              month:"Jun",
+              merch:0
+            },{
+              month:"Jul",
+              merch:0
+            },{
+              month:"Aug",
+              merch:0
+            },{
+              month:"Sep",
+              merch:0
+            },{
+              month:"Oct",
+              merch:0
+            },{
+              month:"Nov",
+              merch:0
+            },{
+              month:"Dec",
+              merch:0
+            },]
+
+          lab = defaults.map(function(item) {
+                return item.month;
+            });
+
+           count = defaults.map(function(item) {
+                const p = suc_trans.find((x) => x.month_name === item.month)
+                return p ? p.count : item.merch;
+            });
+
+            fcount = defaults.map(function(item) {
+                const p = fld_trans.find((x) => x.month_name === item.month)
+                return p ? p.count : item.merch;
+            });
+
+            var lbs = defaults.map(function(item) {
+                item.month === lab[0] ? item.merch = count[0] : item.merch = 0;
+            });
+
+            var f_lbs = defaults.map(function(item) {
+                item.month === lab[0] ? item.merch = fcount[0] : item.merch = 0;
+            });
+
+
+            let li_data ={
+                labels: lab,
+
+                datasets: [{
+                    label: "Success",
+                    lineTension: 0.3,
+                    backgroundColor: "rgba(78, 115, 223, 0.05)",
+                    borderColor: "rgba(78, 115, 223, 1)",
+                    pointRadius: 3,
+                    pointBackgroundColor: "rgba(78, 115, 223, 1)",
+                    pointBorderColor: "rgba(78, 115, 223, 1)",
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+                    pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+                    pointHitRadius: 10,
+                    pointBorderWidth: 2,
+                    data: count,
+                },
+
+                {
+                    label: "Failed",
+                    lineTension: 0.3,
+                    backgroundColor: "rgba(78, 115, 223, 0.05)",
+                    borderColor: "red",
+                    pointRadius: 3,
+                    pointBackgroundColor: "red",
+                    pointBorderColor: "red",
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: "red",
+                    pointHoverBorderColor: "red",
+                    pointHitRadius: 10,
+                    pointBorderWidth: 2,
+                    data: fcount,
+                }
+                
+                ],
+            }
+
+
+            var myLineChart = new Chart(ctx, {
+                type: 'line',
+                data: li_data,
+                options: {
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: {
+                            left: 10,
+                            right: 25,
+                            top: 25,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            time: {
+                                unit: 'date'
+                            },
+                            gridLines: {
+                                display: false,
+                                drawBorder: false
+                            },
+                            ticks: {
+                                maxTicksLimit: 7
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                maxTicksLimit: 5,
+                                padding: 10,
+                            },
+                            gridLines: {
+                                color: "rgb(234, 236, 244)",
+                                zeroLineColor: "rgb(234, 236, 244)",
+                                drawBorder: false,
+                                borderDash: [2],
+                                zeroLineBorderDash: [2]
+                            }
+                        }],
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        backgroundColor: "rgb(255,255,255)",
+                        bodyFontColor: "#858796",
+                        titleMarginBottom: 10,
+                        titleFontColor: '#6e707e',
+                        titleFontSize: 14,
+                        borderColor: '#dddfeb',
+                        borderWidth: 1,
+                        xPadding: 15,
+                        yPadding: 15,
+                        displayColors: false,
+                        intersect: false,
+                        mode: 'index',
+                        caretPadding: 10,
+                        callbacks: {
+                            label: function(tooltipItem, chart) {
+                                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                                return datasetLabel
+                            }
+                        }
+                    }
+                }
+            });
+
+
+        // This is the Approval Rates Bar
+
+
+
+
+
+            var ctx = document.getElementById("myWeeklyApprovalBarChart");
+
+
+
+            let weekly = {'Monday': {'count': 0, 'success': 0, 'failed': 0}, 'Tuesday': {'count': 0, 'success': 0, 'failed': 0}, 'Wednesday': {'count': 0, 'success': 0, 'failed': 0}, 'Thursday': {'count': 0, 'success': 0, 'failed': 0}, 'Friday': {'count': 0, 'success': 0, 'failed': 0}, 'Saturday': {'count': 0, 'success': 0, 'failed': 0}, 'Sunday': {'count': 0, 'success': 0, 'failed': 0}}
+
+
+
+            let success=[
+                weekly.Monday.success,
+                weekly.Tuesday.success,
+                weekly.Wednesday.success,
+                weekly.Thursday.success,
+                weekly.Friday.success,
+                weekly.Saturday.success,
+                weekly.Sunday.success,
+            ]
+
+            let failed=[
+                weekly.Monday.failed,
+                weekly.Tuesday.failed,
+                weekly.Wednesday.failed,
+                weekly.Thursday.failed,
+                weekly.Friday.failed,
+                weekly.Saturday.failed,
+                weekly.Sunday.failed,
+            ]
+
+            
+            let days = ["Monday", "Tuesday", "Wednesday", "Thursday", 'Friday', 'Saturday', 'Sunday']
+         
+
+
+            
+
+            var dat = {
+                labels: days,
+                datasets: [
+                    {
+                        label: "Success",
+                        backgroundColor: "#4e73df",
+                        data: success
+                    },
+                    {
+                        label: "Failed",
+                        backgroundColor: "red",
+                        data: failed
+                    },
+                ]
+            }
+
+
+            var myWeeklyApprovalBarChart = new Chart(ctx, {
+                type: 'bar',
+                data: dat,
+                options: {
+                  maintainAspectRatio: false,
+                  layout: {
+                    padding: {
+                      left: 10,
+                      right: 25,
+                      top: 25,
+                      bottom: 0
+                    }
+                  },
+                  scales: {
+                    xAxes: [{
+                      time: {
+                        unit: 'month'
+                      },
+                      stacked: true,
+                      gridLines: {
+                        display: false,
+                        drawBorder: false
+                      },
+                      ticks: {
+                        maxTicksLimit: 6
+                      },
+                      maxBarThickness: 50,
+                    }],
+                    yAxes: [{
+                      ticks: {
+                        min: 0,
+                     
+                        padding: 10,
+                        // Include a dollar sign in the ticks
+                
+                      },
+                      stacked: true,
+                      gridLines: {
+                        color: "rgb(234, 236, 244)",
+                        zeroLineColor: "rgb(234, 236, 244)",
+                        drawBorder: false,
+                        borderDash: [2],
+                        zeroLineBorderDash: [2]
+                      }
+                    }],
+                  },
+                  legend: {
+                    position: 'right'
+                  },
+                  tooltips: {
+                    titleMarginBottom: 10,
+                    titleFontColor: '#6e707e',
+                    titleFontSize: 14,
+                    backgroundColor: "rgb(255,255,255)",
+                    bodyFontColor: "#858796",
+                    borderColor: '#dddfeb',
+                    borderWidth: 1,
+                    xPadding: 15,
+                    yPadding: 15,
+                    displayColors: false,
+                    caretPadding: 10,
+          
+                  },
+                }
+              });
+              
+
+            
+        // This is the Pie Chart Code
+
+        let responseCodes = []
+
+        let labels = responseCodes.map(function(item) {
+            return item.response_code;
+        });
+
+        let values = responseCodes.map(function(item) {
+            return item.n;
+        });
+
+        var p = document.getElementById("myPieChart");
+
+        var myPieChart = new Chart(p, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+            data: values,
+            backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+            hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+            hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            caretPadding: 10,
+            },
+            legend: {
+            display: false
+            },
+            cutoutPercentage: 80,
+        },
+        });
+
+        
+
+
+        </script>
+
+
+
+        
+  
+
+
+</div></div><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><div class="daterangepicker ltr show-ranges opensright"><div class="ranges"><ul><li data-range-key="Today">Today</li><li data-range-key="Yesterday">Yesterday</li><li data-range-key="Last 7 Days">Last 7 Days</li><li data-range-key="Last 30 Days">Last 30 Days</li><li data-range-key="This Month">This Month</li><li data-range-key="Last Month">Last Month</li><li data-range-key="Custom Range">Custom Range</li></ul></div><div class="drp-calendar left"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div></div></body></html>
