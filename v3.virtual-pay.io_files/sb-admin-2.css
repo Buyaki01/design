@@ -4827,6 +4827,11 @@ input[type=submit].btn-block {
     border-bottom: 1px solid #e3e6f0
 }
 
+.card-header1{
+    background-color: #a21c52;
+    color: white;
+}
+
 .card-header:first-child {
     border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0
 }
