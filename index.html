@@ -35,255 +35,206 @@
 <body id="page-top">
 
     <!-- Page Wrapper -->
-    <div id="wrapper" class="">
+  <div id="wrapper" class="">
         
         <!-- Navigation -->
-      
-      
-
-         
-  
- 
-            
-<!-- Sidebar -->
-<ul class="
-    navbar-nav
-    bg-gradient-primary
-    sidebar sidebar-dark
-    accordion
-    {%
-    if
-    request.user_agent.is_mobile
-    %}toggled{%
-    endif%}
-  " id="accordionSidebar">
-    <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://v3.virtual-pay.io/">
-        <div class="sidebar-brand-text mx-3">
-            <img src="v3.virtual-pay.io_files/vp_logo.png" class="img-fluid" alt="Responsive image">
-        </div>
-    </a>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-
-    <!-- Nav Item - Dashboard -->
-
-    <li class="nav-item active">
-        <a class="nav-link" href="https://v3.virtual-pay.io/">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
-    </li>
-     <li class="nav-item ">
-        <a class="nav-link" href="https://v3.virtual-pay.io/payments/">
-            <i class="fas fa-box-open    "></i>
-            <span>Collections</span></a>
-    </li>
-
-
-
-
-
-  <li class="nav-item ">
-      <a class="nav-link" href="https://v3.virtual-pay.io/disbursals/">
-          <i class="fas fa-paper-plane"></i>
-          <span>Disbursals</span></a>
-  </li>
-
-   
-  <li class="nav-item ">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-balances" aria-expanded="true" aria-controls="collapse-balances">
-      <i class="fas fa-fw fa-balance-scale"></i>
-      <span>Balances</span>
-    </a>
-    <div id="collapse-balances" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item " href="https://v3.virtual-pay.io/balances/a/"><i class="fas fa-fw fa-th"></i> Balance</a>
-      
-        <a class="collapse-item " href="https://v3.virtual-pay.io/balances/a/h/"><i class="fas fa fa-list-alt"></i> Transactions
+        
+       <!-- Sidebar -->
+    <ul class="
+        navbar-nav
+        sidebar sidebar-dark
+        shadow-lg
+        accordion
+        {%
+        if
+        request.user_agent.is_mobile
+        %}toggled{%
+        endif%}
+      " id="accordionSidebar">
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://v3.virtual-pay.io/">
+            <div class="sidebar-brand-text mx-3">
+                <img src="v3.virtual-pay.io_files/vp_logo.png" class="img-fluid" alt="Responsive image">
+            </div>
         </a>
-      
-      </div>
-    </div>
-  </li>
-  
-  <li class="nav-item ">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-settlements" aria-expanded="true" aria-controls="collapse-settlements">
-      <i class="fas fa-fw fa-balance-scale"></i>
-      <span>Settlements</span>
-    </a>
-    <div id="collapse-settlements" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item " href="https://v3.virtual-pay.io/settlements/"><i class="fas fa-fw fa-th"></i> Settlements</a>
-      
-        <a class="collapse-item " href="https://v3.virtual-pay.io/settlement/create/"><i class="fas fa fa-list-alt"></i> Create Settlement</a>
-      
-      </div>
-    </div>
-  </li>
-  
-  
-  <li class="nav-item ">
-    <a class="nav-link collapsed" href="https://v3.virtual-pay.io/reserves/a/">
-      <i class="fas fa-fw fa-balance-scale"></i>
-      <span>Reserves</span>
-    </a> 
-  </li>
-  
 
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
 
- 
-    
+        <!-- Nav Item - Dashboard -->
 
-    <hr class="sidebar-divider my-0">
-      
-      
+        <li class="nav-item active">
+            <a class="nav-link" href="https://v3.virtual-pay.io/">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
         <li class="nav-item ">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-users" aria-expanded="true" aria-controls="collapse-users">
-                <i class="fas fa-fw fa-users"></i>
-                <span>Users</span>
+            <a class="nav-link" href="https://v3.virtual-pay.io/payments/">
+                <i class="fas fa-box-open    "></i>
+                <span>Collections</span></a>
+        </li>
+
+      <li class="nav-item ">
+          <a class="nav-link" href="https://v3.virtual-pay.io/disbursals/">
+              <i class="fas fa-paper-plane"></i>
+              <span>Disbursals</span></a>
+      </li>
+
+      
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-balances" aria-expanded="true" aria-controls="collapse-balances">
+          <i class="fas fa-fw fa-balance-scale"></i>
+          <span>Balances</span>
+        </a>
+        <div id="collapse-balances" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item " href="https://v3.virtual-pay.io/balances/a/"><i class="fas fa-fw fa-th"></i> Balance</a>
+          
+            <a class="collapse-item " href="https://v3.virtual-pay.io/balances/a/h/"><i class="fas fa fa-list-alt"></i> Transactions
             </a>
-              <div id="collapse-users" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
-                  <div class="bg-white py-2 collapse-inner rounded">
+          
+          </div>
+        </div>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-settlements" aria-expanded="true" aria-controls="collapse-settlements">
+          <i class="fas fa-fw fa-balance-scale"></i>
+          <span>Settlements</span>
+        </a>
+        <div id="collapse-settlements" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item " href="https://v3.virtual-pay.io/settlements/"><i class="fas fa-fw fa-th"></i> Settlements</a>
+          
+            <a class="collapse-item " href="https://v3.virtual-pay.io/settlement/create/"><i class="fas fa fa-list-alt"></i> Create Settlement</a>
+          
+          </div>
+        </div>
+      </li>
+      
+      
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="https://v3.virtual-pay.io/reserves/a/">
+          <i class="fas fa-fw fa-balance-scale"></i>
+          <span>Reserves</span>
+        </a> 
+      </li>
+      
+        <hr class="sidebar-divider my-0">
+          
+          
+            <li class="nav-item ">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-users" aria-expanded="true" aria-controls="collapse-users">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Users</span>
+                </a>
+                  <div id="collapse-users" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+                      <div class="bg-white py-2 collapse-inner rounded">
 
-                      
-                        <a class="collapse-item " href="https://v3.virtual-pay.io/users/staff"><i class="fas fa-fw fa-users"></i> Staff Users</a>
-                      
+                          
+                            <a class="collapse-item " href="https://v3.virtual-pay.io/users/staff"><i class="fas fa-fw fa-users"></i> Staff Users</a>
+                          
 
-                    
-                        <a class="collapse-item " href="https://v3.virtual-pay.io/users/"><i class="fas fa-fw fa-users"></i> All Users</a>
                         
+                            <a class="collapse-item " href="https://v3.virtual-pay.io/users/"><i class="fas fa-fw fa-users"></i> All Users</a>
+                            
+                </div>
+              </div>
+            </li>
 
-                        
-                        
-                    
-
+        <li class="nav-item ">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-merchants" aria-expanded="true" aria-controls="collapse-merchants">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Merchants</span>
+          </a>
+          <div id="collapse-merchants" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item " href="https://v3.virtual-pay.io/m/"><i class="fas fa-fw fa-users"></i> Merchants</a>
+            
+              <a class="collapse-item " href="https://v3.virtual-pay.io/m/category_code"><i class="fas fa fa-list-alt"></i> Category Codes</a>
+            
             </div>
           </div>
         </li>
 
+          <li class="nav-item ">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-refunds" aria-expanded="true" aria-controls="collapse-refunds">
+
+            <i class="fa fa-money" aria-hidden="true"></i>
+              <span>Refunds</span>
+            </a>
+            <div id="collapse-refunds" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">  
+                  <a class="collapse-item " href="https://v3.virtual-pay.io/refunds/"><i class="fas fa fa-list-alt"></i> Refunds</a>
+              </div>
+            </div>
+          </li>
       
-
-
-    <li class="nav-item ">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-merchants" aria-expanded="true" aria-controls="collapse-merchants">
-        <i class="fas fa-fw fa-users"></i>
-        <span>Merchants</span>
-      </a>
-      <div id="collapse-merchants" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item " href="https://v3.virtual-pay.io/m/"><i class="fas fa-fw fa-users"></i> Merchants</a>
-        
-          <a class="collapse-item " href="https://v3.virtual-pay.io/m/category_code"><i class="fas fa fa-list-alt"></i> Category Codes</a>
-        
-        </div>
-      </div>
-    </li>
-
-
-
-
-
-
       <li class="nav-item ">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-refunds" aria-expanded="true" aria-controls="collapse-refunds">
-
-        <i class="fa fa-money" aria-hidden="true"></i>
-          <span>Refunds</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-admin" aria-expanded="true" aria-controls="collapse-admin">
+          <i class="fas fa-fw fa-users"></i>
+          <span>Admin</span>
         </a>
-        <div id="collapse-refunds" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">  
-              <a class="collapse-item " href="https://v3.virtual-pay.io/refunds/"><i class="fas fa fa-list-alt"></i> Refunds</a>
+            <div id="collapse-admin" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item " href="https://v3.virtual-pay.io/acquirer/"><i class="fas fa-fw fa-users"></i> Acquirers</a>
+            <a class="collapse-item " href="https://v3.virtual-pay.io/cardbrand/"><i class="fas fa-fw fa-envelope"></i> Card Brands</a>
+            <a class="collapse-item " href="https://v3.virtual-pay.io/currency/"><i class="fas fa-fw fa-dollar-sign"></i> Currencies</a>
+              <a class="collapse-item " href="https://v3.virtual-pay.io/country/"><i class="fas fa-fw fa-flag"></i> Countries</a>
+              <a class="collapse-item " href="https://v3.virtual-pay.io/momo/rate/"><i class="fas fa-fw fa-dollar-sign"></i> Mobile Money Rates</a>
+              <a class="collapse-item " href="https://v3.virtual-pay.io/exchanges/">
+              <i class="fas fa-fw fa-dollar-sign"></i>
+              Exchange
+            </a>
+              <a class="collapse-item " href="https://v3.virtual-pay.io/roles/"><i class="fas fa-fw fa-key"></i> Roles</a>      
+            <a class="collapse-item " href="https://v3.virtual-pay.io/chargebacks/">
+                <i class="fa fa-server" aria-hidden="true"></i>
+                <span>ChargeBack</span>
+            </a>
+            
           </div>
         </div>
       </li>
-  
-  
 
+      <li class="nav-item ">
+            <a class="nav-link" href="https://v3.virtual-pay.io/blacklist/">
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+                <span>Blacklist</span></a>
+      </li>
 
-  <li class="nav-item ">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-admin" aria-expanded="true" aria-controls="collapse-admin">
-      <i class="fas fa-fw fa-users"></i>
-      <span>Admin</span>
-    </a>
-        <div id="collapse-admin" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item " href="https://v3.virtual-pay.io/acquirer/"><i class="fas fa-fw fa-users"></i> Acquirers</a>
-        <a class="collapse-item " href="https://v3.virtual-pay.io/cardbrand/"><i class="fas fa-fw fa-envelope"></i> Card Brands</a>
-        <a class="collapse-item " href="https://v3.virtual-pay.io/currency/"><i class="fas fa-fw fa-dollar-sign"></i> Currencies</a>
-          <a class="collapse-item " href="https://v3.virtual-pay.io/country/"><i class="fas fa-fw fa-flag"></i> Countries</a>
-          <a class="collapse-item " href="https://v3.virtual-pay.io/momo/rate/"><i class="fas fa-fw fa-dollar-sign"></i> Mobile Money Rates</a>
-          <a class="collapse-item " href="https://v3.virtual-pay.io/exchanges/">
-          <i class="fas fa-fw fa-dollar-sign"></i>
-           Exchange
-        </a>
-           <a class="collapse-item " href="https://v3.virtual-pay.io/roles/"><i class="fas fa-fw fa-key"></i> Roles</a>      
-        <a class="collapse-item " href="https://v3.virtual-pay.io/chargebacks/">
-            <i class="fa fa-server" aria-hidden="true"></i>
-            <span>ChargeBack</span>
-        </a>
-        
+    <li class="nav-item ">
+      <a class="nav-link" href="https://v3.virtual-pay.io/account/two_factor/">
+        <i class="fas fa-fw fa-user"></i>
+          <span>Account Security</span></a>
+    </li>
+
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
-    </div>
-  </li>
-
-   <li class="nav-item ">
-        <a class="nav-link" href="https://v3.virtual-pay.io/blacklist/">
-        <i class="fa fa-window-close" aria-hidden="true"></i>
-            <span>Blacklist</span></a>
-  </li>
 
 
- 
-
- 
- 
-
-
-
-
- <li class="nav-item ">
-  <a class="nav-link" href="https://v3.virtual-pay.io/account/two_factor/">
-    <i class="fas fa-fw fa-user"></i>
-      <span>Account Security</span></a>
-</li>
-
-
-
-
-
-  <div class="text-center d-none d-md-inline">
-    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-  </div>
-
-
-</ul>
+    </ul>
         
   
         <!-- End Navigation -->
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content-wrapper" class="d-flex flex-column">
              <!-- Main Content -->
-             <div id="content">
-              
-              
-
-<!-- Topbar -->
-<nav class="navbar navbar-expand navbar-light topbar mb-1 static-top shadow">
- 
-    <!-- Sidebar Toggle (Topbar) -->
-    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
-    </button>
-    <!-- Topbar Navbar -->
-  
-    <div class="sidebar-brand-text mx-3 text-nowrap" style="overflow-x: hidden;"><h3><strong>Virtual Pay</strong></h3></div>
-    <ul class="navbar-nav ml-auto">
-      <!-- Nav Item - User Information -->
+      <div id="content">
+   
+      <!-- Topbar -->
+      <nav class="navbar navbar-expand navbar-light topbar mb-1 static-top shadow-lg">
+        <!-- Sidebar Toggle (Topbar) -->
+        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+          <i class="fa fa-bars"></i>
+        </button>
+          <!-- Topbar Navbar -->
+        <div class="sidebar-brand-text mx-3 text-nowrap" style="overflow-x: hidden;"><h3><strong>Virtual Pay</strong></h3></div>
+          <ul class="navbar-nav ml-auto">
+            <!-- Nav Item - User Information -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		      <span class="mr-2 text-dark-600 "> admin</span>
-                
+		            <span class="mr-2 text-dark-600 "> admin</span>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -303,22 +254,15 @@
                 </a>
               </div>
             </li>
-    </ul>
+          </ul>
   
-</nav>
-
-              
-              <!-- Begin Page Container Fluid -->
-              <div class="container-fluid">
-                
-                
-                
-                  <!-- Page Heading -->
-                  
-
-
-                  
-<div class="row m-3">
+      </nav>
+      <!-- Begin Page Container Fluid -->
+      <div class="container-fluid">
+       
+        <!-- Page Heading -->
+             
+<div class="row">
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -1589,20 +1533,18 @@
              </div> <!-- End Main Content -->
             
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-			    <span>© <script>document.write(new Date().getFullYear())</script>2022
-</span>
-                    </div>
+            <footer class="sticky-footer shadow-lg">
+              <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                  <span>© <script>document.write(new Date().getFullYear())</script>2022
+                  </span>
                 </div>
+              </div>
             </footer>
             <!-- End of Footer -->
-            
-            
-
+         
         </div> <!-- End Content Wrapper -->
-    </div> <!-- End Page Wrapper -->
+    /div> <!-- End Page Wrapper -->
  <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>

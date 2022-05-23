@@ -10697,9 +10697,12 @@ a:focus {
 }
 
 #wrapper #content-wrapper {
-    background-color: #f8f9fc;
+    /* background-color: #f8f9fc; */
     width: 100%;
-    overflow-x: hidden
+    overflow-x: hidden;
+    background-image: url("./virtual-pay-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #wrapper #content-wrapper #content {
