@@ -36,6 +36,7 @@
     background-color: #fff;
     padding: 3px 5px;
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
     width: 170px;
 }
 
@@ -45,7 +46,7 @@
     background-color: #fff;
     padding: 3px 5px;
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
-    /* width: 170px; */
+    margin-left: 15px;
 }
 
 .ui-tooltip {
