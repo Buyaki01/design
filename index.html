@@ -24,7 +24,6 @@
     <link rel="icon" href="https://v3.virtual-pay.io/static/img/favicon.5139e9467cfe.png">
     <script src="v3.virtual-pay.io_files/jquery.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    "node_modules/flag-icon-css/css/flag-icon.min.css"
     <script type="text/javascript" src="v3.virtual-pay.io_files/moment.js"></script>
     <script type="text/javascript" src="v3.virtual-pay.io_files/daterangepicker.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
@@ -228,8 +227,8 @@
       <div id="content">
    
       <!-- Topbar -->
-      <nav class="navbar navbar-expand bg-white mb-1 shadow-lg fixed-top">
-        <div class="d-flex justify-end">
+      <nav class="navbar navbar-expand bg-white mb-1 shadow-lg fixed-top flex justify-between">
+        <div>
           <img src="v3.virtual-pay.io_files/new-virtual-pay-logo.png" class="img-fluid img-new-logo" alt="Responsive image">
         </div>
         <!-- Sidebar Toggle (Topbar) -->
@@ -238,31 +237,33 @@
         </button> -->
           <!-- Topbar Navbar -->
         <!-- <div class="sidebar-brand-text mx-3 text-nowrap" style="overflow-x: hidden;"><h3><strong>Virtual Pay</strong></h3></div> -->
-          <!-- <ul class="navbar-nav ml-auto"> -->
-            <!-- Nav Item - User Information -->
-            <!-- <li class="nav-item dropdown"> -->
-              <!-- <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		            <span class="mr-2 text-dark-600 "> admin</span>
-              </a> -->
-              <!-- Dropdown - User Information -->
-              <!-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="https://v3.virtual-pay.io/profile/">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
+          <div>
+            <ul>
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="text-dark-600 "> admin</span>
                 </a>
-                <a class="dropdown-item" href="https://v3.virtual-pay.io/accounts/password/change/">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Change Password
-                </a>
-                
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://v3.virtual-pay.io/accounts/logout/">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Logout
-                </a>
-              </div> -->
-            <!-- </li> -->
-          <!-- </ul> -->
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="https://v3.virtual-pay.io/profile/">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="https://v3.virtual-pay.io/accounts/password/change/">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Change Password
+                  </a>
+                  
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="https://v3.virtual-pay.io/accounts/logout/">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
   
       </nav>
       <!-- Begin Page Container Fluid -->
@@ -272,7 +273,7 @@
              
   <div class="row">
     <div class="container-fluid">
-      <div class="row d-flex justify-content-between mt-5 mb-3">
+      <div class="row flex justify-between mt-16 mb-3">
           <!-- <div class="d-flex justify-content-between container-fluid  mb-4"> -->
 
             <div class="ml-3">
