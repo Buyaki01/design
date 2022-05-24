@@ -225,6 +225,12 @@ svg {
     vertical-align: middle
 }
 
+.fi{ 
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
 table {
     border-collapse: collapse
 }
@@ -1969,6 +1975,10 @@ pre code {
 
 .table-responsive>.table-bordered {
     border: 0
+}
+
+.table-status{
+  border-radius: 25px;
 }
 
 tr[data-status='1'] {
@@ -11318,6 +11328,7 @@ a:focus {
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
     /* background-color: #eaecf4 */
     background-color: #d5504a;
+    border: 1px solid white;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:active,
