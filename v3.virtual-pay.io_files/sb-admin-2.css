@@ -4284,7 +4284,8 @@ input[type=submit].btn-block {
 
 .nav-link:focus,
 .nav-link:hover {
-    text-decoration: none
+    text-decoration: none;
+    border: 1px solid white;
 }
 
 .nav-link.disabled {

@@ -23,9 +23,9 @@
     <link rel="stylesheet" type="text/css" href="v3.virtual-pay.io_files/daterangepicker.css">
     <link rel="icon" href="https://v3.virtual-pay.io/static/img/favicon.5139e9467cfe.png">
     <script src="v3.virtual-pay.io_files/jquery.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script type="text/javascript" src="v3.virtual-pay.io_files/moment.js"></script>
     <script type="text/javascript" src="v3.virtual-pay.io_files/daterangepicker.js"></script>
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     
@@ -35,7 +35,7 @@
 <body id="page-top">
 
     <!-- Page Wrapper -->
-  <div id="wrapper" class="">
+  <div id="wrapper" class="bg-white p-2 m-2">
         
         <!-- Navigation -->
         
@@ -44,8 +44,8 @@
         navbar-nav
         sidebar sidebar-dark
         sidebar-menu
+        p-2
         shadow-lg
-        border-white
         accordion
         {%
         if
@@ -450,7 +450,7 @@
                     <div class="d-flex flex-row justify-content-between card-header card-header1">
                         <h6 class="m-0 font-weight-bold text-white">Today's Collections and Disbursals</h6>
 
-                        <input type="text" id="merchantSelect" class="date-picker ml-3 ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                        <input type="text" id="merchantSelect" placeholder="Search" class="date-picker ml-3 ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
 
 
                         
@@ -471,7 +471,7 @@
                                     
                                     
                                         <tr>
-                                            <td>GHS</td>
+                                            <td> <span class="fi fi-gr"></span> <span class="fi fi-gr fis"></span> GHS</td>
                                             <td>0</td>
                                             <td>0</td>
                                         </tr>
@@ -535,7 +535,7 @@
                     </div>
                     <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table table-hover">
                                     <tbody><tr>
                                         <th>DateTime</th>
                                         <th>Payment Type</th>
@@ -553,7 +553,7 @@
                                         <td>01FYXJ71CKNCH1C06EV0ZWXWGG</td>
                                         <td>100</td>
                                         <td>USD</td>
-                                        <td class="   text-danger "> Failed</td>
+                                        <td class="text-danger py-3 px-6 rounded-md"> Failed</td>
                                         
                                     </tr><tr>
                                         <td>March 10, 2022, 8:52 a.m.</td>

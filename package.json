@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "flag-icons": "^6.4.2",
+    "react-flags-icons": "^1.0.2"
+  }
+}
