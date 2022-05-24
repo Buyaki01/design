@@ -521,11 +521,19 @@ mark {
 .img-fluid{
     height: 50px;
 }
-
+  
 /* .img-fluid {
     max-width: 100%;
     height: auto
 } */
+
+.nav-link .balances-icon {
+  background-image: url('./virtual-pay-bg.png');
+    height: 20px;
+    width: 20px;
+    display: block;
+  /* Other styles here */
+}
 
 .img-thumbnail {
     padding: .25rem;

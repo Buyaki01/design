@@ -86,7 +86,8 @@
       <hr class="sidebar-divider my-0">
       <li class="nav-item ">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-balances" aria-expanded="true" aria-controls="collapse-balances">
-          <i class="fas fa-fw fa-balance-scale"></i>
+          <!-- <i class="fas fa-fw fa-balance-scale"></i> -->
+          <span class="balances-icon"></span>
           <span>Balances</span>
         </a>
         <div id="collapse-balances" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
@@ -278,7 +279,7 @@
 
             <div class="ml-3">
 
-              <div id="reportrange" style="background: #fff; cursor: pointer; border: 1px solid #ccc; width: 100%; margin: 2px; " class="date-picker2">
+              <div id="reportrange" style="cursor: pointer; width: 100%; margin: 2px; " class="date-picker2 border text-white">
                   <i class="fa fa-calendar"></i>&nbsp;
                   <span>April 18, 2022 - May 17, 2022</span> <i class="fa fa-caret-down"></i>
               </div>
@@ -287,10 +288,10 @@
             <!-- <div class="d-flex flex-row justify-content-around"> -->
               
 
-              <div class="dropdown d-flex">
-                <div class="text-white m-2" id="currency-card">
+              <div class="dropdown d-flex text-white">
+                <!-- <div class="text-white m-2" id="currency-card">
                   <p>Please Select a Currency</p>
-                </div>
+                </div> -->
                 <select id="currencySelect" name="currency_id" class="date-picker">
                   <option selected="selected" hidden="">Select currency</option>
                   
@@ -551,7 +552,7 @@
                                         <th>Status</th>
                                     </tr>
                                     
-                                    <tr class="p-3">
+                                    <tr>
                                         <td> March 24, 2022, 8:55 a.m. </td>
                                         <td> Mobile Money </td>
                                         <td>Pay Teka Limited</td>
