@@ -20,6 +20,7 @@
     <!-- Custom styles for this template-->
     <link href="v3.virtual-pay.io_files/sb-admin-2.css" rel="stylesheet">
     <link href="v3.virtual-pay.io_files/virtualpay.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="v3.virtual-pay.io_files/daterangepicker.css">
     <link rel="icon" href="https://v3.virtual-pay.io/static/img/favicon.5139e9467cfe.png">
     <script src="v3.virtual-pay.io_files/jquery.js"></script>
@@ -295,17 +296,17 @@
                 <select id="currencySelect" name="currency_id" class="date-picker">
                   <option selected="selected" hidden="">Select currency</option>
                   
-                  <option value="6">GHS</option>
+                  <option value="6"> <span class="flag-icon flag-icon-gh"></span> GHS</option>
               
-                  <option value="5">TZS</option>
+                  <option value="5"> <span class="flag-icon flag-icon-tz"></span> TZS</option>
               
-                  <option value="4">UGX</option>
+                  <option value="4"> <span class="flag-icon flag-icon-ug"></span> UGX</option>
               
                   <option value="3">EUR</option>
               
-                  <option value="2">USD</option>
+                  <option value="2"> <span class="flag-icon flag-icon-us"></span> USD</option>
               
-                  <option value="1">KES</option>  
+                  <option value="1"> <span class="flag-icon flag-icon-ke"></span> KES</option>  
                 </select>
               </div>
 
@@ -456,10 +457,7 @@
                     <div class="d-flex flex-row justify-content-between card-header card-header1">
                         <h6 class="m-0 font-weight-bold text-white">Today's Collections and Disbursals</h6>
 
-                        <input type="text" id="merchantSelect" placeholder="Search" class="date-picker ml-3 ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
-
-
-                        
+                        <input type="text" id="merchantSelect" placeholder="Search" class="date-picker ml-3 ui-autocomplete-input text-white" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"> 
                     </div>
 
          
@@ -477,19 +475,19 @@
                                     
                                     
                                         <tr>
-                                            <td> GHS <span class="flag-icon flag-icon-gha bg-red"></span> <span class="fi fi-gr fis"></span> </span></td>
+                                            <td> <span class="flag-icon flag-icon-gh"></span> GHS </td>
                                             <td>0</td>
                                             <td>0</td>
                                         </tr>
                                     
                                         <tr>
-                                            <td>TZS <span class="flag-icon flag-icon-tza flag-icon-squared"> </span> </td>
+                                            <td> <span class="flag-icon flag-icon-tz"></span> TZS </td>
                                             <td>0</td>
                                             <td>0</td>
                                         </tr>
                                     
                                         <tr>
-                                            <td>UGX <span class="flag-icon flag-icon-uga flag-icon-squared"></span></td>
+                                            <td> <span class="flag-icon flag-icon-ug"></span> UGX</td>
                                             <td>0</td>
                                             <td>0</td>
                                         </tr>
@@ -501,13 +499,13 @@
                                         </tr>
                                     
                                         <tr>
-                                            <td>USD</td>
+                                            <td> <span class="flag-icon flag-icon-us"></span> USD</td>
                                             <td>0</td>
                                             <td>0</td>
                                         </tr>
                                     
                                         <tr>
-                                            <td>KES</td>
+                                            <td> <span class="flag-icon flag-icon-ke"></span> KES</td>
                                             <td>0</td>
                                             <td>0</td>
                                         </tr>

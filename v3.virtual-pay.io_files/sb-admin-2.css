@@ -607,6 +607,11 @@ pre code {
     margin-left: auto
 }
 
+::placeholder {
+    color: white;
+}
+  
+
 @media (min-width:576px) {
     .container {
         max-width: 540px
