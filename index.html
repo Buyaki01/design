@@ -87,8 +87,10 @@
       <hr class="sidebar-divider my-0">
       <li class="nav-item ">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-balances" aria-expanded="true" aria-controls="collapse-balances">
-          <!-- <i class="fas fa-fw fa-balance-scale"></i> -->
-          <span class="balances-icon"></span>
+          <i class="fas fa-fw fa-balance-scale"></i>
+          <!-- <span class="balances-icon"></span> -->
+          <!-- <img src="https://i.ibb.co/W044RSB/balance.png" alt="balance" border="0"> -->
+          <!-- <img src="https://i.ibb.co/W044RSB/balance.png" alt="balance" class="balances-icon"> -->
           <span>Balances</span>
         </a>
         <div id="collapse-balances" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
@@ -242,7 +244,7 @@
           <div>
             <ul>
               <!-- Nav Item - User Information -->
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown userDropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="text-dark-600 "> admin</span>
                 </a>
@@ -302,7 +304,7 @@
               
                   <option value="4"> <span class="flag-icon flag-icon-ug"></span> UGX</option>
               
-                  <option value="3">EUR</option>
+                  <option value="3"> <span class="flag-icon flag-icon-eu"></span> EUR</option>
               
                   <option value="2"> <span class="flag-icon flag-icon-us"></span> USD</option>
               
@@ -457,7 +459,7 @@
                     <div class="d-flex flex-row justify-content-between card-header card-header1">
                         <h6 class="m-0 font-weight-bold text-white">Today's Collections and Disbursals</h6>
 
-                        <input type="text" id="merchantSelect" placeholder="Search" class="date-picker ml-3 ui-autocomplete-input text-white" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"> 
+                        <input type="text" id="merchantSelect" placeholder="Search" class="text-white date-picker ml-3 ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"> 
                     </div>
 
          
@@ -493,7 +495,7 @@
                                         </tr>
                                     
                                         <tr>
-                                            <td>EUR</td>
+                                            <td> <span class="flag-icon flag-icon-eu"></span> EUR</td>
                                             <td>0</td>
                                             <td>0</td>
                                         </tr>
@@ -551,7 +553,12 @@
                                     </tr>
                                     
                                     <tr>
-                                        <td> March 24, 2022, 8:55 a.m. </td>
+                                        <td> 
+                                          <div class="cal">
+                                            <div class="month"> March </div>
+                                            <div class="date">24</div>
+                                          </div>
+                                        </td>
                                         <td> Mobile Money </td>
                                         <td>Pay Teka Limited</td>
                                         <td>01FYXJ71CKNCH1C06EV0ZWXWGG</td>
@@ -2471,4 +2478,4 @@
   
 
 
-</div></div><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><div class="daterangepicker ltr show-ranges opensright"><div class="ranges"><ul><li data-range-key="Today">Today</li><li data-range-key="Yesterday">Yesterday</li><li data-range-key="Last 7 Days">Last 7 Days</li><li data-range-key="Last 30 Days">Last 30 Days</li><li data-range-key="This Month">This Month</li><li data-range-key="Last Month">Last Month</li><li data-range-key="Custom Range">Custom Range</li></ul></div><div class="drp-calendar left"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div></div></body></html>
+</div></div><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><div class="daterangepicker ltr show-ranges opensright"><div class="ranges"><ul><li data-range-key="Today's Transactions">Today</li><li data-range-key="Yesterday">Yesterday</li><li data-range-key="Last 7 Days">Last 7 Days transaction</li><li data-range-key="Last 30 Days">Last 30 Days transaction</li><li data-range-key="This Month">This Month transaction</li><li data-range-key="Last Month">Last Month Transaction</li><li data-range-key="Custom Range">Custom Range</li></ul></div><div class="drp-calendar left"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div></div></body></html>

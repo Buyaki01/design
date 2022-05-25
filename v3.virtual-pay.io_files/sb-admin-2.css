@@ -527,13 +527,11 @@ mark {
     height: auto
 } */
 
-.nav-link .balances-icon {
-  background-image: url('./virtual-pay-bg.png');
-    height: 20px;
-    width: 20px;
-    display: block;
-  /* Other styles here */
-}
+/* .nav-link .balances-icon {
+	height: 20px;
+	width: 20px;
+	display: block;
+} */
 
 .img-thumbnail {
     padding: .25rem;
@@ -608,9 +606,39 @@ pre code {
 }
 
 ::placeholder {
-    color: white;
+  color: white;
 }
   
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+   
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+.cal {
+	display: inline-block;
+	border: .1px solid #CCCAC5;
+	background-color: #FFF;
+	width: 200px;
+	height: 30px;
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+.cal .month {
+	height: 50px;
+	line-height: 50px;
+	font-size: 2rem;
+	text-transform: uppercase;
+	background-color: #E75951;
+	color: #FFF;
+}
+.cal .date {
+	font-size: 10rem;
+	color: #585858;
+	line-height: 100px;
+}
 
 @media (min-width:576px) {
     .container {
@@ -3280,6 +3308,10 @@ input[type=submit].btn-block {
 .dropright,
 .dropup {
     position: relative
+}
+
+.userDropdown a:hover{
+    color: #ce434d;
 }
 
 .dropdown-toggle {

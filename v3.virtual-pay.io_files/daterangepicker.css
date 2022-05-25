@@ -330,7 +330,7 @@
 }
 
 .daterangepicker .ranges li.active {
-  background-color: #08c;
+  background-color: #ce434d;
   color: #fff;
 }
 
@@ -341,7 +341,7 @@
   }
 
   .daterangepicker .ranges ul {
-    width: 140px;
+    width: 262px;
   }
 
   .daterangepicker.single .ranges ul {
