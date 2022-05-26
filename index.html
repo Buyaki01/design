@@ -459,13 +459,13 @@
                     <div class="d-flex flex-row justify-content-between card-header card-header1">
                         <h6 class="m-0 font-weight-bold text-white">Today's Collections and Disbursals</h6>
 
-                        <input type="text" id="merchantSelect" placeholder="Search" class="text-white date-picker ml-3 ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"> 
+                        <input type="text" id="merchantSelect" placeholder="Search" class="text-white date-picker ml-3" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"> 
                     </div>
 
          
                     <div class="card-body">
                         <div class="mb-4 " id="merch_trans">
-                            <p class="text-center"> Merchnat Name: <strong>VPR SAFE FINANCIAL GROUP</strong></p><table class="table table-striped table-bordered table-hover table-sm">
+                            <p class="text-center"> Merchnat Name: <strong>VPR SAFE FINANCIAL GROUP</strong></p><table class="table table-striped table-bordered table-hover table-sm table-responsive">
                                 <thead>
                                     <tr>
                                         <th>Currency</th>
@@ -542,7 +542,8 @@
                     <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-hover">
-                                    <tbody><tr>
+                                    <thead>
+                                      <tr>
                                         <th>DateTime</th>
                                         <th>Payment Type</th>
                                         <th>Merchant Id</th>
@@ -550,104 +551,65 @@
                                         <th>Amount</th>
                                         <th>Currency</th>
                                         <th>Status</th>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td> 
-                                          <div class="cal">
-                                            <div class="month"> March </div>
-                                            <div class="date">24</div>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <div>
+                                          <td> 
+                                            <div class="cal">
+                                              <div class="month"> March </div>
+                                              <div class="date">24</div>
+                                            </div>
+                                          </td>
+                                          <td> Mobile Money </td>
+                                          <td>Pay Teka Limited</td>
+                                          <td>01FYXJ71CKNCH1C06EV0ZWXWGG</td>
+                                          <td>100</td>
+                                          <td>USD</td>
+                                          <td class="table-status"> <span class="border text-center flex justify-center bg-danger text-white rounded-md"> Failed </span> </td>
+                                          <td>
+                                            <button class="collapsible" id="see-more">See More</button>
+                                          </td>
+
+                                          <div id="collapsible-see-more" style="display: none;">
+                                            <tr>
+                                              <td>March 9, 2022, 8:41 a.m.</td>
+                                              <td>Mobile Money</td>
+                                              <td>MYRTLE LTD</td>
+                                              <td>01FXPXF2DNPNN8TW2ZYV7808H0</td>
+                                              <td>100000</td>
+                                              <td>KES</td>
+                                              <td class="table-status"> <span class="border text-center flex justify-center bg-success text-white rounded-md"> Complete </span> </td>
+                                            </tr>
+                                            <tr>
+                                              <td>March 9, 2022, 8:02 a.m.</td>
+                                              <td>Mobile Money</td>
+                                              <td>MYRTLE LTD</td>
+                                              <td>01FXPV6R01KM17DVDVFGWVAEJ6</td>
+                                              <td>100</td>
+                                              <td>USD</td>
+                                              <td> <span class="border text-center flex justify-center bg-success text-white rounded-md"> Complete </span></td>
+                                              
+                                            </tr>
+      
+                                            <tr>
+                                              <td>March 9, 2022, 7:48 a.m.</td>
+                                              <td>Mobile Money</td>
+                                              <td>MYRTLE LTD</td>
+                                              <td>01FXPTCM0ZKKCCX9VRGD50Y4N8</td>
+                                              <td>1</td>
+                                              <td>USD</td>
+                                              <td> <span class="border text-center flex justify-center bg-danger text-white rounded-md"> Failed </span></td>
+                                              
+                                            </tr>
                                           </div>
-                                        </td>
-                                        <td> Mobile Money </td>
-                                        <td>Pay Teka Limited</td>
-                                        <td>01FYXJ71CKNCH1C06EV0ZWXWGG</td>
-                                        <td>100</td>
-                                        <td>USD</td>
-                                        <td class="table-status"> <span class="border text-center flex justify-center bg-danger text-white rounded-md"> Failed </span> </td>
-                                        
-                                    </tr><tr>
-                                        <td>March 10, 2022, 8:52 a.m.</td>
-                                        <td>Card</td>
-                                        <td>Virtua Pay Test 2</td>
-                                        <td>REF00186688</td>
-                                        <td>100</td>
-                                        <td>USD</td>
-                                        <td class="table-status"> <span class="border text-center flex justify-center bg-info text-white rounded-md"> Billing</span> </td>
-                                        
-                                    </tr><tr>
-                                        <td>March 9, 2022, 8:41 a.m.</td>
-                                        <td>Mobile Money</td>
-                                        <td>MYRTLE LTD</td>
-                                        <td>01FXPXF2DNPNN8TW2ZYV7808H0</td>
-                                        <td>100000</td>
-                                        <td>KES</td>
-                                        <td class="table-status"> <span class="border text-center flex justify-center bg-success text-white rounded-md"> Complete </span> </td>
-                                        
-                                    </tr><tr>
-                                        <td>March 9, 2022, 8:02 a.m.</td>
-                                        <td>Mobile Money</td>
-                                        <td>MYRTLE LTD</td>
-                                        <td>01FXPV6R01KM17DVDVFGWVAEJ6</td>
-                                        <td>100</td>
-                                        <td>USD</td>
-                                        <td> <span class="border text-center flex justify-center bg-success text-white rounded-md"> Complete </span></td>
-                                        
-                                    </tr><tr>
-                                        <td>March 9, 2022, 7:51 a.m.</td>
-                                        <td>Mobile Money</td>
-                                        <td>MYRTLE LTD</td>
-                                        <td>01FXPTK80D1FKW7VYFT8YAEH0E</td>
-                                        <td>1</td>
-                                        <td>USD</td>
-                                        <td><span class="border text-center flex justify-center bg-success text-white rounded-md"> Complete </span> </td>
-                                        
-                                    </tr><tr>
-                                        <td>March 9, 2022, 7:48 a.m.</td>
-                                        <td>Mobile Money</td>
-                                        <td>MYRTLE LTD</td>
-                                        <td>01FXPTCM0ZKKCCX9VRGD50Y4N8</td>
-                                        <td>1</td>
-                                        <td>USD</td>
-                                        <td> <span class="border text-center flex justify-center bg-danger text-white rounded-md"> Failed </span></td>
-                                        
-                                    </tr><tr>
-                                        <td>March 9, 2022, 6:42 a.m.</td>
-                                        <td>Mobile Money</td>
-                                        <td>MYRTLE LTD</td>
-                                        <td>01FXPPMGEAJWRET5E83WNZY2C0</td>
-                                        <td>100000</td>
-                                        <td>KES</td>
-                                        <td> <span class="border text-center flex justify-center bg-success text-white rounded-md">Complete</span> </td>
-                                        
-                                    </tr><tr>
-                                        <td>March 5, 2022, 6:43 a.m.</td>
-                                        <td>Mobile Money</td>
-                                        <td>Pay Teka Limited</td>
-                                        <td>01FXCD2VE1PJ8ZNEBFMARE07GV</td>
-                                        <td>500000</td>
-                                        <td>USD</td>
-                                        <td> <span class="border text-center flex justify-center bg-success text-white rounded-md">Complete</span> </td>
-                                        
-                                    </tr><tr>
-                                        <td>March 4, 2022, 1:42 p.m.</td>
-                                        <td>Mobile Money</td>
-                                        <td>MYRTLE LTD</td>
-                                        <td>01FXAJPJAQC1HS5GE76S44VBJB</td>
-                                        <td>5000</td>
-                                        <td>USD</td>
-                                        <td> <span class="border text-center flex justify-center bg-success text-white rounded-md">Complete</span> </td>
-                                        
-                                    </tr><tr>
-                                        <td>March 4, 2022, 1:42 p.m.</td>
-                                        <td>Mobile Money</td>
-                                        <td>MYRTLE LTD</td>
-                                        <td>01FXAJP7SKN628TE6EB29J960M</td>
-                                        <td>50000</td>
-                                        <td>USD</td>
-                                        <td> <span class="border text-center flex justify-center bg-success text-white rounded-md">Complete</span> </td>
-                                        
-                                </tr></tbody></table>
+                                        </div>
+                                      </tr>
+                                      
+                                    </tbody>
+                                    
+                              </table>
                             </div>
               
                     </div>
@@ -661,6 +623,35 @@
         <script src="v3.virtual-pay.io_files/jquery-ui.js"></script>
         <script type="text/javascript" src="v3.virtual-pay.io_files/moment.js"></script>
         <script type="text/javascript" src="v3.virtual-pay.io_files/daterangepicker.js"></script>
+        
+        <script type="text/javascript">
+          const openMenu = document.querySelector('#see-more');
+          // const closeMenu = document.querySelector('#close-hamburger');
+          const collapsibleSeeMore = document.querySelector('#collapsible-see-more');
+
+          function open() {
+            if(collapsibleSeeMore.style.display === 'block'){
+              collapsibleSeeMore.style.display = 'none';
+              
+            }
+            else{
+              collapsibleSeeMore.style.display = 'block';
+              
+            }
+            console.log("open");
+            // closeMenu.style.display = 'block';
+
+          }
+          function close() {
+            collapsibleSeeMore.style.display = 'none';
+            openMenu.style.display = 'block';
+            // closeMenu.style.display = 'none';
+          }
+        
+          openMenu.addEventListener('click', open);
+          // closeMenu.addEventListener('click', close);
+
+        </script>
         
         <script type="text/javascript">
 
@@ -1598,7 +1589,22 @@
         <script src="v3.virtual-pay.io_files/jquery-ui.js"></script>
         <script type="text/javascript" src="v3.virtual-pay.io_files/moment.js"></script>
         <script type="text/javascript" src="v3.virtual-pay.io_files/daterangepicker.js"></script>
-        
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.maxHeight){
+                content.style.maxHeight = null;
+              } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+              } 
+            });
+          }
+        </script>
         <script type="text/javascript">
 
 
