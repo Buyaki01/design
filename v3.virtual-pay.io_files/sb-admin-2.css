@@ -621,6 +621,10 @@ input::placeholder {
   color: white;
 }
 
+.latest-payment-header{
+  background: #ce434d;
+}
+
 .cal {
 	display: inline-block;
 	border: .1px solid #CCCAC5;
@@ -644,36 +648,25 @@ input::placeholder {
 	line-height: 120px;
 }
 
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
- .collapsible:hover {
-    background-color: #555;
-  }
-  
-  .content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
-  }
+.cell-1{
+  border-collapse: separate;
+  border-spacing: 0 4em;
+  border-bottom: 5px solid gray;
+  background-clip: padding-box;
+  background: #FFF;
+}
+
+.row-child {
+  background: #d34d4b;
+  color: #fff
+}
 
 .container-fluid {
-    /* width: 100%; */
-    padding-right: .75rem;
-    padding-left: .75rem;
-    margin-right: auto;
-    margin-left: 100px;
+  /* width: 100%; */
+  padding-right: .75rem;
+  padding-left: .75rem;
+  margin-right: auto;
+  margin-left: 100px;
 }
 
 @media (min-width:768px) {
