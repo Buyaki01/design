@@ -11690,7 +11690,10 @@ a:focus {
 }
 
 .sidebar-dark .nav-item .nav-link[data-toggle=collapse]::after {
-    color: rgba(255, 255, 255, .5)
+    color: rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
 }
 
 .sidebar-dark .nav-item.active .nav-link {
