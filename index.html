@@ -85,13 +85,18 @@
       </li>
 
       <hr class="sidebar-divider my-0">
-      <li class="nav-item ">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-balances" aria-expanded="true" aria-controls="collapse-balances">
-          <i class="fas fa-fw fa-balance-scale"></i>
+      <li class="nav-item">
+        <a class="nav-link collapsed inline-flex" href="#" data-toggle="collapse" data-target="#collapse-balances" aria-expanded="true" aria-controls="collapse-balances">
+          <!-- <i class="fas fa-fw fa-balance-scale"></i> -->
           <!-- <span class="balances-icon"></span> -->
           <!-- <img src="https://i.ibb.co/W044RSB/balance.png" alt="balance" border="0"> -->
-          <!-- <img src="https://i.ibb.co/W044RSB/balance.png" alt="balance" class="balances-icon"> -->
-          <span>Balances</span>
+            <div class="w-10 rounded-full balances-icon mr-1">
+              <img src="https://i.ibb.co/W044RSB/balance.png" alt="balance">
+            </div>
+            <div class="mt-2">
+              <span>Balances</span>
+            </div>
+            
         </a>
         <div id="collapse-balances" class="collapse " aria-labelledby="headingusers" data-parent="#accordionSidebar">
           <div class="py-2 collapse-inner rounded">
@@ -557,20 +562,20 @@
                                     <th></th>
                                   </tr>
                                 </thead>
-                                <tbody class="table-body p-8">
+                                <tbody class="table-body">
                                   <tr class="cell-1 m-5 p-5" data-toggle="collapse" data-target="#demo">
-                                    <td> 
+                                    <td class="border border-slate-300"> 
                                       <div class="cal">
                                         <div class="month"> March </div>
                                         <div class="date">24</div>
                                       </div>
                                     </td>
-                                    <td> Mobile Money </td>
+                                    <td class="border-bottom"> Mobile Money </td>
                                     <td>Pay Teka Limited</td>
                                     <td>01FYXJ71CKNCH1C06EV0ZWXWGG</td>
                                     <td>100</td>
                                     <td>USD</td>
-                                    <td class="table-status"> <span class="border text-center flex justify-center bg-danger text-white rounded-md"> Failed </span> </td>
+                                    <td> <span class="border text-center flex justify-center bg-danger text-white rounded-md"> Failed </span> </td>
                                     <td class="table-elipse" data-toggle="collapse" data-target="#demo"><i class="fa fa-ellipsis-h text-black-50"></i></td>
                                   </tr>
 
@@ -612,42 +617,6 @@
                                     <td>100</td>
                                     <td>USD</td>
                                     <td colspan="2"> <span class="border text-center flex justify-center bg-success text-white rounded-md"> Complete </span></td>
-                                  </tr>
-
-
-                                  <tr class="cell-1" data-toggle="collapse" data-target="#demo-2">
-                                    <td> 
-                                      <div class="cal">
-                                        <div class="month"> February </div>
-                                        <div class="date"> 28 </div>
-                                      </div>
-                                    </td>
-                                    <td>Mobile Money</td>
-                                    <td>MYRTLE LTD</td>
-                                    <td>01FXPXF2DNPNN8TW2ZYV7808H0</td>
-                                    <td>100000</td>
-                                    <td>KES</td>
-                                    <td class="table-status"> <span class="border text-center flex justify-center bg-success text-white rounded-md"> Complete </span> </td>
-                                    <td class="table-elipse" data-toggle="collapse" data-target="#demo"><i class="fa fa-ellipsis-h text-black-50"></i></td>
-                                  </tr>
-                                  <tr id="demo-2" class="collapse cell-1 row-child">
-                                    <td>February 28, 2022, 7:51 a.m.</td>
-                                    <td>Mobile Money</td>
-                                    <td>MYRTLE LTD</td>
-                                    <td>01FXPTK80D1FKW7VYFT8YAEH0E</td>
-                                    <td>1</td>
-                                    <td>USD</td>
-                                    <td colspan="2" class="table-status"> <span class="border text-center flex justify-center bg-success text-white rounded-md"> Complete</td>
-                                  </tr>
-
-                                  <tr id="demo-2" class="collapse cell-1 row-child">
-                                    <td>February 20, 2022, 7:48 a.m.</td>
-                                    <td>Mobile Money</td>
-                                    <td>MYRTLE LTD</td>
-                                    <td>01FXPTCM0ZKKCCX9VRGD50Y4N8</td>
-                                    <td>1</td>
-                                    <td>USD</td>
-                                    <td colspan="2" class="table-status"> <span class="border text-center flex justify-center bg-danger text-white rounded-md"> Failed</td>
                                   </tr>
 
                                 </tbody>

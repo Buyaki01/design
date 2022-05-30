@@ -658,7 +658,8 @@ input::placeholder {
 
 .row-child {
   background: #d34d4b;
-  color: #fff
+  color: #fff;
+  border: 1px solid black;
 }
 
 .container-fluid {
@@ -11483,7 +11484,7 @@ a:focus {
     }
 
     .sidebar .nav-item .nav-link {
-        display: block;
+        /* display: block; */
         width: 100%;
         text-align: left;
         /* padding: 10px; */
