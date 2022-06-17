@@ -622,7 +622,7 @@ input::placeholder {
 }
 
 .latest-payment-header{
-  background: #ce434d;
+  background: #f39107;
 }
 
 .cal {
@@ -639,7 +639,7 @@ input::placeholder {
 	line-height: 50px;
 	font-size: 2rem;
 	text-transform: uppercase;
-	background-color: #E75951;
+	background-color: #f49c22;
 	color: #FFF;
 }
 .cal .date {
@@ -651,7 +651,7 @@ input::placeholder {
 .cell-1{
   border-collapse: separate;
   border-spacing: 0 4em;
-  border-bottom: 5px solid gray;
+  border-bottom: 2px solid gray;
   background-clip: padding-box;
   background: #FFF;
 }
@@ -4893,14 +4893,13 @@ input[type=submit].btn-block {
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
-    background-color: #f8f9fc;
+    background-color: #f6ad48;
     border-bottom: 1px solid #e3e6f0
 }
 
-.card-header1{
+/* .card-header1{
     background-color: #ce434d;
-    /* background-color: rgb(87, 84, 84); */
-}
+} */
 
 .card-header:first-child {
     border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0
@@ -10775,7 +10774,7 @@ a:focus {
     /* background-color: #f8f9fc; */
     width: 100%;
     overflow-x: hidden;
-    background-image: url("./virtual-pay-bg.png");
+    /* background-image: url("./virtual-pay-bg.png"); */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -11654,11 +11653,12 @@ a:focus {
 }
 
 .sidebar-menu{
-    margin-top: 75px;
+  margin-top: 75px;
+  background-color: #f49714;
 }
 
 .sidebar-dark .sidebar-brand {
-    color: #fff
+  color: #fff
 }
 
 .sidebar-dark hr.sidebar-divider {
@@ -11670,23 +11670,25 @@ a:focus {
 }
 
 .sidebar-dark .nav-item .nav-link {
-    color: rgba(255, 255, 255, .8)
+    /* color: #7a0641; */
+    color: #ffffff;
 }
 
 .sidebar-dark .nav-item .nav-link i {
-    color: rgba(255, 255, 255, .3)
+    /* color: #7a0641; */
+    color: #ffffff;
 }
 
 .sidebar-dark .nav-item .nav-link:active,
 .sidebar-dark .nav-item .nav-link:focus,
 .sidebar-dark .nav-item .nav-link:hover {
-    color: #fff
+    color: #ffffff;
 }
 
 .sidebar-dark .nav-item .nav-link:active i,
 .sidebar-dark .nav-item .nav-link:focus i,
 .sidebar-dark .nav-item .nav-link:hover i {
-    color: #fff
+    color: #ffffff;
 }
 
 .sidebar-dark .nav-item .nav-link[data-toggle=collapse]::after {
