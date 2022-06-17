@@ -12347,6 +12347,7 @@ footer.sticky-footer {
     padding: 2rem 0;
     flex-shrink: 0;
     margin-left: 130px;
+    background-color: #f49c22;
 }
 
 footer.sticky-footer .copyright {
