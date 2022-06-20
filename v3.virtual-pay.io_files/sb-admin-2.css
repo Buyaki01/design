@@ -622,7 +622,7 @@ input::placeholder {
 }
 
 .latest-payment-header{
-  background: #f39107;
+  background: #f59e24;
 }
 
 .cal {
@@ -639,7 +639,7 @@ input::placeholder {
 	line-height: 50px;
 	font-size: 2rem;
 	text-transform: uppercase;
-	background-color: #f49c22;
+	background-color: #f59e24;
 	color: #FFF;
 }
 .cal .date {
@@ -4893,7 +4893,7 @@ input[type=submit].btn-block {
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
-    background-color: #f6ad48;
+    background-color: #f59e24;
     border-bottom: 1px solid #e3e6f0
 }
 
@@ -11654,7 +11654,9 @@ a:focus {
 
 .sidebar-menu{
   margin-top: 75px;
-  background-color: #f49714;
+  /* background-color: #f49714; */
+  background: rgb(245,158,36);
+  background: linear-gradient(180deg, rgba(245,158,36,1) 0%, rgba(129,19,75,1) 100%, rgba(87,87,87,1) 100%);
 }
 
 .sidebar-dark .sidebar-brand {
@@ -11825,11 +11827,11 @@ a:focus {
     width: 100%
 }
 
-@media (min-width:768px) {
+/* @media (min-width:768px) {
     .chart-area {
         height: 20rem
     }
-}
+} */
 
 .chart-bar {
     position: relative;
@@ -11837,11 +11839,11 @@ a:focus {
     width: 100%
 }
 
-@media (min-width:768px) {
+/* @media (min-width:768px) {
     .chart-bar {
         height: 20rem
     }
-}
+} */
 
 .chart-pie {
     position: relative;
@@ -11849,11 +11851,11 @@ a:focus {
     width: 100%
 }
 
-@media (min-width:768px) {
+/* @media (min-width:768px) {
     .chart-pie {
         height: calc(20rem - 43px) !important
     }
-}
+} */
 
 .bg-login-image {
     background: url(https://source.unsplash.com/K4mSJ7kc0As/600x800);
